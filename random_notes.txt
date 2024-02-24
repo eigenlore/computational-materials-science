@@ -1,0 +1,4 @@
+Ab initio -> Schrodinger eq for electrons and classical for ions (I can simulate not too many atoms and I may lose some symmetry of the system, not always best choice)
+Classical -> no electrons, only classical for ions using a suitable potential (must be choosen in an appropriate way otherwise bad results, main problem in classical molecular dynamics is to choose, sometimes you can't find a good potential at all)
+
+Silver is good with two atoms potential, while Silicon no because the molecule has angles. Two atoms potential is good with closely packed lattice (ex fcc). Lennard Jones, not terrible job using it for Silver. Important 1/r^6 because it's Van der Wals.
