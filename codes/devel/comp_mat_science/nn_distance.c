@@ -20,7 +20,6 @@
 int main(int argc, char *argv[])
 {
     char input_file_name[100];
-    double *x, *y, *z;
 
     sprintf(input_file_name, "../../data/input_files/fcc100a%d.dat", N);
     load_data(input_file_name);

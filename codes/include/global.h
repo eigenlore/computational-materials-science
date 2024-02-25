@@ -6,6 +6,7 @@
  * Global parameters and arrays
  *
  * N number of atoms
+ * x, y, z atoms positions in the lattice
  *
  *******************************************************************************/
 
@@ -20,9 +21,9 @@
   #define EXTERN extern
 #endif /*MAIN_PROGRAM*/
 
-EXTERN double x[N];
-EXTERN double y[N];
-EXTERN double z[N];
+EXTERN double xx[N];
+EXTERN double yy[N];
+EXTERN double zz[N];
 
 #undef EXTERN
 
