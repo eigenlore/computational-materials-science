@@ -19,7 +19,7 @@ all: rmxeq mkdep mkxeq
 
 # main programs and required modules 
 
-MAIN = template nn_distance
+MAIN = template test1
 
 RANDOM = ranlxs ranlxd gauss
 

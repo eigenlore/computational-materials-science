@@ -6,10 +6,10 @@
  * The externally accessible functions are
  *
  *  void load_data(double *x, double *y, double *z, char file_name[])
- *      Load the data from the file file_name into x, y and z. 
+ *      Load the data from the file file_name into x, y and z.
  *
  *  double eval_nn_distance(double *x, double *y, double *z)
- *      Evaluates the nn distance of a lattice with positions of the atomes 
+ *      Evaluates the nn distance of a lattice with positions of the atomes
  *      given in x, y and z
  *
  *
@@ -61,4 +61,23 @@ double eval_nn_distance()
     }
 
     return nn_distance;
+}
+
+double lennard_jones(double r)
+{
+    return 4 * EPS * (pow(SIGMA / r, 12) - pow(SIGMA / r, 6));
+}
+
+double eval_U()
+{
+    int i, j;
+    double U;
+
+    U = 0;
+
+    for (i = 0; i < N; i++)
+        for (j = i + 1; j < N; j++)
+            U += lennard_jones(eval_dist(xx[i], yy[i], zz[i], xx[j], yy[j], zz[j]));
+
+    return U;
 }

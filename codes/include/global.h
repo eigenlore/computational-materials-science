@@ -6,6 +6,7 @@
  * Global parameters and arrays
  *
  * N number of atoms
+ * EPS, SIGMA parameters of Lennard Jones potential (eV and Angstrom)
  * x, y, z atoms positions in the lattice
  *
  *******************************************************************************/
@@ -14,9 +15,11 @@
 #define GLOBAL_H
 
 #define N 256
+#define EPS 0.345
+#define SIGMA 2.644
 
-#if defined MAIN_PROGRAM
-  #define EXTERN
+#ifdef MAIN_PROGRAM
+  #define EXTERN 
 #else
   #define EXTERN extern
 #endif /*MAIN_PROGRAM*/
