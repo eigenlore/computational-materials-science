@@ -14,14 +14,14 @@
 #ifndef GLOBAL_H
 #define GLOBAL_H
 
-#define N 256
+#define N 2048
 #define EPS 0.345
 #define SIGMA 2.644
 
 #ifdef MAIN_PROGRAM
-  #define EXTERN 
+#define EXTERN
 #else
-  #define EXTERN extern
+#define EXTERN extern
 #endif /*MAIN_PROGRAM*/
 
 EXTERN double xx[N];
@@ -30,6 +30,6 @@ EXTERN double zz[N];
 
 #undef EXTERN
 
-
-
 #endif /*GLOBAL_H*/
+
+

@@ -5,13 +5,15 @@
  *
  * The externally accessible functions are
  *
- *  void load_data(double *x, double *y, double *z, char file_name[])
- *      Load the data from the file file_name into x, y and z.
+ *  void load_data(char file_name[])
+ *      Load the data from the file file_name into global xx, yy and zz.
  *
- *  double eval_nn_distance(double *x, double *y, double *z)
- *      Evaluates the nn distance of a lattice with positions of the atomes
- *      given in x, y and z
+ *  double eval_nn_distance()
+ *      Evaluates the nn distance of a lattice 
  *
+ *  double eval_U()
+ *      Evaluates the potential energy of the lattice using Lennard Jones 
+ *      potential
  *
  *
  * Author: Lorenzo Tasca
