@@ -14,7 +14,17 @@
 
 #define N 256
 
+#if defined MAIN_PROGRAM
+  #define EXTERN
+#else
+  #define EXTERN extern
+#endif /*MAIN_PROGRAM*/
 
+EXTERN double x[N];
+EXTERN double y[N];
+EXTERN double z[N];
+
+#undef EXTERN
 
 
 
