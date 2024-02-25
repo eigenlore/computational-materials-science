@@ -7,7 +7,6 @@
  * Author: Lorenzo Tasca
  *
  *******************************************************************************/
-
 #define MAIN_PROGRAM
 #define TERM_C
 

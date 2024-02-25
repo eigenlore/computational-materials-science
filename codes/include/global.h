@@ -1,26 +1,21 @@
 
 /*******************************************************************************
-*
-* File global.h
-*
-* Global parameters and arrays
-*
-*
-*******************************************************************************/
+ *
+ * File global.h
+ *
+ * Global parameters and arrays
+ *
+ * N number of atoms
+ *
+ *******************************************************************************/
 
 #ifndef GLOBAL_H
 #define GLOBAL_H
 
+#define N 256
 
-#if defined MAIN_PROGRAM
-  #define EXTERN
-#else
-  #define EXTERN extern
-#endif
 
-/*EXTERN double xx[N];*/
 
-#undef EXTERN
 
-#endif
 
+#endif /*GLOBAL_H*/
