@@ -27,7 +27,7 @@ START = start utils
 
 EXTRAS = 
 
-COMP_MAT_SCIENCE = harmonic_oscillator
+COMP_MAT_SCIENCE = lattice
 
 MODULES = $(RANDOM) $(START) $(EXTRAS) $(COMP_MAT_SCIENCE)
 

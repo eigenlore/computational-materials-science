@@ -1,7 +1,0 @@
-#ifndef HARMONIC_OSCILLATOR_H
-#define HARMONIC_OSCILLATOR_H
-#ifndef HARMONIC_OSCILLATOR_C
-
-
-#endif
-#endif
