@@ -19,7 +19,7 @@ all: rmxeq mkdep mkxeq
 
 # main programs and required modules 
 
-MAIN = check1 check2 check3 time1 time2
+MAIN = 
 
 RANDOM = ranlxs ranlxd gauss
 
@@ -27,14 +27,18 @@ START = start utils
 
 EXTRAS = 
 
-MODULES = $(RANDOM) $(START) $(EXTRAS)
+COMP_MAT_SCIENCE = harmonic_oscillator
+
+
+
+MODULES = $(RANDOM) $(START) $(EXTRAS) $(COMP_MAT_SCIENCE)
 
 
 # search path for modules
 
 MDIR = ../../modules
 
-VPATH = $(MDIR)/random:$(MDIR)/start:$(MDIR)/extras
+VPATH = $(MDIR)/random:$(MDIR)/start:$(MDIR)/extras:$(MDIR)/comp_mat_science
 
 
 # additional include directories
