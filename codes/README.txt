@@ -14,6 +14,7 @@ main             Collection of main programs
 
 modules          Source code of all modules 
 
+data			 Various data files 
 
 In addition to the information provided by the notes in the doc
 directory, short descriptions of the program functionalities should be
