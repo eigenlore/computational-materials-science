@@ -13,14 +13,14 @@
  *
  *  double eval_U()
  *      Evaluates the potential energy of the lattice using Lennard Jones
- *      potential
+ *      potential. It sums only on neighbors.
  *
  *  void eval_nbrs(int *number_nbrs, int **number_nbrs)
  *      Evaluates the number of neighbors of the atom i number_nbrs[i] and
  *      the list of their indexes which_nbrs[i]. which_nbrs[i] has lenght
- *      number_nbrs[i]. It is care of the user to allocate number_nbrs and 
- *      number_nbrs of the correct dimension and to eventually free them. 
- * 
+ *      number_nbrs[i]. It is care of the user to allocate number_nbrs and
+ *      number_nbrs of the correct dimension and to eventually free them.
+ *
  *
  *
  * Author: Lorenzo Tasca
@@ -34,6 +34,25 @@
 #include "global.h"
 #include "random.h"
 #include "lattice.h"
+
+double powerd(double x, int y)
+{
+    double temp;
+    if (y == 0)
+        return 1;
+    temp = powerd(x, y / 2);
+    if ((y % 2) == 0)
+    {
+        return temp * temp;
+    }
+    else
+    {
+        if (y > 0)
+            return x * temp * temp;
+        else
+            return (temp * temp) / x;
+    }
+}
 
 void load_data(char file_name[])
 {
@@ -77,21 +96,17 @@ double eval_nn_distance()
 static double lennard_jones(double r)
 {
     if (r < RC)
-        return 4 * EPS * (pow(SIGMA / r, 12) - pow(SIGMA / r, 6));
+        return 4 * EPS * (powerd(SIGMA / r, 12) - powerd(SIGMA / r, 6));
     else
         return 0;
 }
 
 double eval_U()
 {
-    int i, j, k, *number_nbrs, **which_nbrs;
+    int i, j, k;
     double U;
 
     U = 0;
-    number_nbrs = (int *)malloc(N * sizeof(int));
-    which_nbrs = (int **)malloc(N * sizeof(int *));
-    eval_nbrs(number_nbrs, which_nbrs);
-    assert(number_nbrs != NULL && which_nbrs != NULL);
 
     for (i = 0; i < N; i++)
     {
@@ -101,21 +116,14 @@ double eval_U()
             U += lennard_jones(eval_dist(xx[i], yy[i], zz[i], xx[k], yy[k], zz[k]));
         }
     }
-    U/=2;
-
-    for (i = 0; i < N; i++)
-        free(which_nbrs[i]);
-    free(which_nbrs);
-    free(number_nbrs);
+    U /= 2;
 
     return U;
 }
 
-void eval_nbrs(int *number_nbrs, int **which_nbrs)
+void eval_nbrs()
 {
     int i, j, count, *temp;
-
-    assert(number_nbrs != NULL && which_nbrs != NULL); /*pointers passed must be non empty*/
 
     temp = (int *)malloc(N * sizeof(int));
 
@@ -141,4 +149,44 @@ void eval_nbrs(int *number_nbrs, int **which_nbrs)
         }
     }
     free(temp);
+}
+
+void generate_inital_v(double T)
+{
+    int i;
+    double C, r[3 * N];
+
+    rlxd_init(1, 3122000);
+    ranlxd(r, 3 * N);
+    C = sqrt(3 * KB * T / M);
+
+    for (i = 0; i < N; i++)
+    {
+        vxx[i] = 2 * C * (r[i] - 0.5);
+        vyy[i] = 2 * C * (r[i + N] - 0.5);
+        vzz[i] = 2 * C * (r[i + 2 * N] - 0.5);
+    }
+}
+
+double eval_K()
+{
+    int i;
+    double K;
+    K = 0;
+
+    for (i = 0; i < N; i++)
+        K += vxx[i] * vxx[i] + vyy[i] * vyy[i] + vzz[i] * vzz[i];
+
+    K *= M / 2;
+    return K;
+}
+
+double eval_temperature()
+{
+    double T, K;
+
+    K = eval_K();
+    T = 2 * K / (3 * N * (double)KB);
+
+    return T;
 }

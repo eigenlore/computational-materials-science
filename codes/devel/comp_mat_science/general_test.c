@@ -5,10 +5,11 @@
 #include <lattice.h>
 #include <global.h>
 
-int main ()
+int main()
 {
-	int *p;
-	p = (int*) malloc(N*sizeof(int));
-	assert(p==NULL);
+	double x;
+
+	x = 54*3e-3;
+	printf("%f\n", x);
 	return 0;
 }

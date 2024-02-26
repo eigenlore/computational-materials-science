@@ -1,9 +1,13 @@
 #ifndef LATTICE_H
 #define LATTICE_H
 
+double powerd(double x, int y);
 void load_data(char file_name[]);
 double eval_nn_distance();
 double eval_U();
-void eval_nbrs(int *number_nbrs, int **which_nbrs);
+void eval_nbrs();
+void generate_inital_v(double T);
+double eval_K();
+double eval_temperature();
 
 #endif /*LATTICE_H*/

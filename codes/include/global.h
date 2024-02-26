@@ -6,9 +6,13 @@
  * Global parameters and arrays
  *
  * N number of atoms
- * EPS, SIGMA parameters of Lennard Jones potential (eV and Angstrom)
+ * EPS, SIGMA parameters of Lennard Jones potential
  * RC cutoff radius for Lennard Jones
  * x, y, z atoms positions in the lattice
+ *
+ *
+ *
+ * Author: Lorenzo Tasca
  *
  *******************************************************************************/
 
@@ -16,9 +20,11 @@
 #define GLOBAL_H
 
 #define N 256
-#define EPS 0.345
-#define SIGMA 2.644
-#define RC 4.5
+#define EPS 0.345                    /*eV*/
+#define SIGMA 2.644                  /*A*/
+#define RC 4.5                       /*A*/
+#define KB 0.00008618460742911316    /*eV/K*/
+#define M 11.205e-27 /*kg*/
 
 #ifdef MAIN_PROGRAM
 #define EXTERN
@@ -29,6 +35,11 @@
 EXTERN double xx[N];
 EXTERN double yy[N];
 EXTERN double zz[N];
+EXTERN int number_nbrs[N];
+EXTERN int *which_nbrs[N];
+EXTERN double vxx[N];
+EXTERN double vyy[N];
+EXTERN double vzz[N];
 
 #undef EXTERN
 
