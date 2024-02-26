@@ -156,7 +156,7 @@ void generate_inital_v(double T)
     int i;
     double C, r[3 * N];
 
-    rlxd_init(1, 3122000);
+    rlxd_init(1, 3122000); /*seed*/
     ranlxd(r, 3 * N);
     C = sqrt(3 * KB * T / M);
 
@@ -183,10 +183,53 @@ double eval_K()
 
 double eval_temperature()
 {
-    double T, K;
+    return 2 * eval_K() / (3 * N * KB);
+}
 
-    K = eval_K();
-    T = 2 * K / (3 * N * (double)KB);
+void eval_forces()
+{
+    int i, j, k;
+    double r;
 
-    return T;
+    for (i = 0; i < N; i++)
+    {
+        Fxx[i] = 0;
+        Fyy[i] = 0;
+        Fzz[i] = 0;
+        for (j = 0; j < number_nbrs[i]; j++)
+        {
+            k = which_nbrs[i][j];
+            r = eval_dist(xx[i], yy[i], zz[i], xx[k], yy[k], zz[k]);
+            Fxx[i] += 24 * EPS * powerd(SIGMA, 6) * powerd(r, -8) * (xx[i] - xx[k]) * (2 * powerd(SIGMA, 6) * powerd(r, -6) - 1);
+            Fyy[i] += 24 * EPS * powerd(SIGMA, 6) * powerd(r, -8) * (yy[i] - yy[k]) * (2 * powerd(SIGMA, 6) * powerd(r, -6) - 1);
+            Fzz[i] += 24 * EPS * powerd(SIGMA, 6) * powerd(r, -8) * (zz[i] - zz[k]) * (2 * powerd(SIGMA, 6) * powerd(r, -6) - 1);
+        }
+    }
+}
+
+void verlet_evolution()
+{
+    int i;
+    double old_Fx[N], old_Fy[N], old_Fz[N];
+
+    for (i = 0; i < N; i++)
+    {
+        old_Fx[i] = Fxx[i];
+        old_Fy[i] = Fyy[i];
+        old_Fz[i] = Fzz[i];
+
+        xx[i] += vxx[i] * DT + Fxx[i] * DT * DT / (2 * M);
+        yy[i] += vyy[i] * DT + Fyy[i] * DT * DT / (2 * M);
+        zz[i] += vzz[i] * DT + Fzz[i] * DT * DT / (2 * M);
+    }
+
+    eval_nbrs();
+    eval_forces();
+
+    for (i = 0; i < N; i++)
+    {
+        vxx[i] += (Fxx[i] + old_Fx[i]) * DT / (2 * M);
+        vyy[i] += (Fyy[i] + old_Fy[i]) * DT / (2 * M);
+        vzz[i] += (Fzz[i] + old_Fz[i]) * DT / (2 * M);
+    }
 }

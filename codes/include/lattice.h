@@ -9,5 +9,7 @@ void eval_nbrs();
 void generate_inital_v(double T);
 double eval_K();
 double eval_temperature();
+void eval_forces();
+void verlet_evolution();
 
 #endif /*LATTICE_H*/

@@ -20,11 +20,14 @@
 #define GLOBAL_H
 
 #define N 256
-#define EPS 0.345                    /*eV*/
-#define SIGMA 2.644                  /*A*/
-#define RC 4.5                       /*A*/
-#define KB 0.00008618460742911316    /*eV/K*/
-#define M 11.205e-27 /*kg*/
+#define EPS 0.345                 /*eV*/
+#define SIGMA 2.644               /*A*/
+#define RC 4.5                    /*A*/
+#define KB 0.00008618460742911316 /*eV/K*/
+#define M 11.205e-27              /*kg*/
+#define DT 1e-15                  /*seconds*/
+#define NSTEPS 100
+#define T_INIT 300 /*Kelvin*/
 
 #ifdef MAIN_PROGRAM
 #define EXTERN
@@ -40,6 +43,9 @@ EXTERN int *which_nbrs[N];
 EXTERN double vxx[N];
 EXTERN double vyy[N];
 EXTERN double vzz[N];
+EXTERN double Fxx[N];
+EXTERN double Fyy[N];
+EXTERN double Fzz[N];
 
 #undef EXTERN
 
