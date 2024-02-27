@@ -19,15 +19,18 @@
 #ifndef GLOBAL_H
 #define GLOBAL_H
 
-#define N 256
+#define N 256                     /*atoms*/
 #define EPS 0.345                 /*eV*/
 #define SIGMA 2.644               /*A*/
 #define RC 4.5                    /*A*/
 #define KB 0.00008618460742911316 /*eV/K*/
 #define M 11.205e-27              /*kg*/
-#define DT 1e-15                  /*seconds*/
-#define NSTEPS 100
-#define T_INIT 300 /*Kelvin*/
+#define DT 8e-15                  /*seconds*/
+#define T_INIT 15                 /*Kelvin*/
+#define TERM_TIME 3e-12           /*seconds*/
+#define TOT_TIME 10e-12           /*seconds*/
+#define PBC 0                     /*1 with PBC, 0 without*/
+#define SIZE 16.641600            /*A*/
 
 #ifdef MAIN_PROGRAM
 #define EXTERN

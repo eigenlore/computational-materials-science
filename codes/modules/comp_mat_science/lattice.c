@@ -68,9 +68,20 @@ void load_data(char file_name[])
     fclose(file);
 }
 
+static double eval_dist1D(double a, double b)
+{
+    double res;
+
+    res = a - b;
+    if (PBC)
+        res -= SIZE * floor(res / SIZE + 0.5);
+
+    return res;
+}
+
 static double eval_dist(double x1, double y1, double z1, double x2, double y2, double z2)
 {
-    return sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2) + (z1 - z2) * (z1 - z2));
+    return sqrt(eval_dist1D(x1, x2) * eval_dist1D(x1, x2) + eval_dist1D(y1, y2) * eval_dist1D(y1, y2) + eval_dist1D(z1, z2) * eval_dist1D(z1, z2));
 }
 
 double eval_nn_distance()
@@ -151,20 +162,45 @@ void eval_nbrs()
     free(temp);
 }
 
-void generate_inital_v(double T)
+void generate_inital_v()
 {
     int i;
-    double C, r[3 * N];
+    double C, r[3 * N], v_tot_x, v_tot_y, v_tot_z, T_temp;
 
     rlxd_init(1, 3122000); /*seed*/
     ranlxd(r, 3 * N);
-    C = sqrt(3 * KB * T / M);
+    C = sqrt(3 * KB * T_INIT / M);
+    v_tot_x = 0;
+    v_tot_y = 0;
+    v_tot_z = 0;
 
+    /*Generate inital velocities*/
     for (i = 0; i < N; i++)
     {
         vxx[i] = 2 * C * (r[i] - 0.5);
         vyy[i] = 2 * C * (r[i + N] - 0.5);
         vzz[i] = 2 * C * (r[i + 2 * N] - 0.5);
+        v_tot_x += vxx[i];
+        v_tot_y += vyy[i];
+        v_tot_z += vzz[i];
+    }
+
+    /*Adjust to be to have stationary center of mass*/
+    for (i = 0; i < N; i++)
+    {
+        vxx[i] -= v_tot_x / (double)N;
+        vyy[i] -= v_tot_y / (double)N;
+        vzz[i] -= v_tot_z / (double)N;
+    }
+
+    T_temp = eval_temperature();
+
+    /*Riscale to have temperature T instead of T_temp*/
+    for (i = 0; i < N; i++)
+    {
+        vxx[i] *= sqrt(T_INIT / T_temp);
+        vyy[i] *= sqrt(T_INIT / T_temp);
+        vzz[i] *= sqrt(T_INIT / T_temp);
     }
 }
 
@@ -200,9 +236,9 @@ void eval_forces()
         {
             k = which_nbrs[i][j];
             r = eval_dist(xx[i], yy[i], zz[i], xx[k], yy[k], zz[k]);
-            Fxx[i] += 24 * EPS * powerd(SIGMA, 6) * powerd(r, -8) * (xx[i] - xx[k]) * (2 * powerd(SIGMA, 6) * powerd(r, -6) - 1);
-            Fyy[i] += 24 * EPS * powerd(SIGMA, 6) * powerd(r, -8) * (yy[i] - yy[k]) * (2 * powerd(SIGMA, 6) * powerd(r, -6) - 1);
-            Fzz[i] += 24 * EPS * powerd(SIGMA, 6) * powerd(r, -8) * (zz[i] - zz[k]) * (2 * powerd(SIGMA, 6) * powerd(r, -6) - 1);
+            Fxx[i] += 24 * EPS * powerd(SIGMA, 6) * powerd(r, -8) * eval_dist1D(xx[i], xx[k]) * (2 * powerd(SIGMA, 6) * powerd(r, -6) - 1);
+            Fyy[i] += 24 * EPS * powerd(SIGMA, 6) * powerd(r, -8) * eval_dist1D(yy[i], yy[k]) * (2 * powerd(SIGMA, 6) * powerd(r, -6) - 1);
+            Fzz[i] += 24 * EPS * powerd(SIGMA, 6) * powerd(r, -8) * eval_dist1D(zz[i], zz[k]) * (2 * powerd(SIGMA, 6) * powerd(r, -6) - 1);
         }
     }
 }
@@ -232,4 +268,16 @@ void verlet_evolution()
         vyy[i] += (Fyy[i] + old_Fy[i]) * DT / (2 * M);
         vzz[i] += (Fzz[i] + old_Fz[i]) * DT / (2 * M);
     }
+}
+
+void thermalization()
+{
+    int i;
+
+    eval_nbrs();
+    eval_forces();
+    generate_inital_v();
+
+    for (i = 0; i * DT < TERM_TIME; i++)
+        verlet_evolution();
 }

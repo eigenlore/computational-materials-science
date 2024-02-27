@@ -3,7 +3,7 @@
  *
  * File test4.c
  *
- * Test to check the Verlet evolution
+ * Print on file energy and temperature at each time step.
  *
  * Author: Lorenzo Tasca
  *
@@ -20,23 +20,24 @@
 int main(int argc, char *argv[])
 {
     int i;
-    char input_file_name[100];
+    char file_name[100];
+    FILE *fd;
 
-    sprintf(input_file_name, "../../data/input_files/fcc100a%d.dat", N);
-    load_data(input_file_name);
+    sprintf(file_name, "../../data/input_files/fcc100a%d.dat", N);
+    load_data(file_name);
 
-    eval_nbrs();
-    generate_inital_v(T_INIT);
-    eval_forces();
+    thermalization();
 
-    for(i=0; i<NSTEPS; i++)
+    sprintf(file_name, "../../data/test_files/energy_and_temperature.dat");
+    fd = fopen(file_name, "w");
+
+    for (i = 0; i * DT < TOT_TIME; i++)
     {
-        printf("The energy is %f\t", eval_K()+eval_U());
-        printf("The temperature is %f\n", eval_temperature());
+        fprintf(fd, "%.15e %.15e %.15e %15e\n", i * DT, eval_K() + eval_U(), eval_temperature(), vxx[i]);
         verlet_evolution();
     }
 
-    
+    fclose(fd);
 
     return 0;
 }

@@ -2,3 +2,11 @@ Ab initio -> Schrodinger eq for electrons and classical for ions (I can simulate
 Classical -> no electrons, only classical for ions using a suitable potential (must be choosen in an appropriate way otherwise bad results, main problem in classical molecular dynamics is to choose, sometimes you can't find a good potential at all)
 
 Silver is good with two atoms potential, while Silicon no because the molecule has angles. Two atoms potential is good with closely packed lattice (ex fcc). Lennard Jones, not terrible job using it for Silver. Important 1/r^6 because it's Van der Wals.
+
+We expect zero force to act on the internal atoms of the bulk, and non zero in the external. In a infinite lattice all atoms have zero force, because there are always two symmetric atoms that balance.
+
+In a molecular dynamics code the time step is of the order of femtoseconds, so the total time of the simulation is going to be of order of nanoseconds, maybe microseconds, but cannot reach for example one hour (would require too many iterations). I need small time step to properly simulate, but not too short otherwise I would have a too short total time of the simulation. 
+
+Velocity Verlet has the problem of assigning initial velocity (just look at the expression, it is not known). How do we assign? We link it to the concept of temperature (tricky because we are in microcanonical). We use equipartition theorem to define temperature as proportional to the total kinetic energy. Will fluctuate because we are not in canonical. There is a thermalization time, you can estimate it but we start from a given value. The thermalization temperature will oscillate aroung 1/2 the initial (if temperature not too big to use harmonic approx, and we start from a energy minimum configuration, otherwise you have to find by trials and errors the initial temperature to have the final you want). I can use Boltzmann dist to extract, but since it thermalizes anyway I use uniform distribution. 
+
+With PBC I cant' describe thermal expansion of a solid. Can't describe a distortion because it would replicate it.

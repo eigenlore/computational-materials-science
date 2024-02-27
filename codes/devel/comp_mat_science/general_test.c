@@ -7,9 +7,6 @@
 
 int main()
 {
-	double x;
 
-	x = 54*3e-3;
-	printf("%f\n", x);
 	return 0;
 }
