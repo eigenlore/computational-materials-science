@@ -1,6 +1,7 @@
 {
   "files.associations": {
     "math.h": "c",
-    "random.h": "c"
+    "random.h": "c",
+    "global.h": "c"
   }
 }

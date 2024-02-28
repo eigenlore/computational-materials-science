@@ -54,6 +54,17 @@ double powerd(double x, int y)
     }
 }
 
+void free_all()
+{
+    int i;
+
+    for (i = 0; i < N; i++)
+    {
+        free(which_nbrs[i]);
+        which_nbrs[i] = NULL;
+    }
+}
+
 void load_data(char file_name[])
 {
     FILE *file;
@@ -106,10 +117,11 @@ double eval_nn_distance()
 
 static double lennard_jones(double r)
 {
-    if (r < RC)
+
+    if (r < RP)
         return 4 * EPS * (powerd(SIGMA / r, 12) - powerd(SIGMA / r, 6));
     else
-        return 0;
+        return A + B * powerd(r, 1) + C * powerd(r, 2) + D * powerd(r, 3) + E * powerd(r, 4) + F * powerd(r, 5) + G * powerd(r, 6) + H * powerd(r, 7);
 }
 
 double eval_U()
@@ -138,6 +150,8 @@ void eval_nbrs()
 
     temp = (int *)malloc(N * sizeof(int));
 
+    free_all();
+
     for (i = 0; i < N; i++)
     {
         number_nbrs[i] = 0;
@@ -150,7 +164,6 @@ void eval_nbrs()
                 number_nbrs[i]++;
                 temp[count++] = j;
             }
-
         /*I allocate the memory for which_nbrs[i] and copy the indexes from temp*/
         if (number_nbrs[i] != 0)
         {
@@ -165,11 +178,11 @@ void eval_nbrs()
 void generate_inital_v()
 {
     int i;
-    double C, r[3 * N], v_tot_x, v_tot_y, v_tot_z, T_temp;
+    double c, r[3 * N], v_tot_x, v_tot_y, v_tot_z, T_temp;
 
     rlxd_init(1, 3122000); /*seed*/
     ranlxd(r, 3 * N);
-    C = sqrt(3 * KB * T_INIT / M);
+    c = sqrt(3 * KB * T_INIT / M);
     v_tot_x = 0;
     v_tot_y = 0;
     v_tot_z = 0;
@@ -177,9 +190,9 @@ void generate_inital_v()
     /*Generate inital velocities*/
     for (i = 0; i < N; i++)
     {
-        vxx[i] = 2 * C * (r[i] - 0.5);
-        vyy[i] = 2 * C * (r[i + N] - 0.5);
-        vzz[i] = 2 * C * (r[i + 2 * N] - 0.5);
+        vxx[i] = 2 * c * (r[i] - 0.5);
+        vyy[i] = 2 * c * (r[i + N] - 0.5);
+        vzz[i] = 2 * c * (r[i + 2 * N] - 0.5);
         v_tot_x += vxx[i];
         v_tot_y += vyy[i];
         v_tot_z += vzz[i];
@@ -270,6 +283,24 @@ void verlet_evolution()
     }
 }
 
+void euler_evolution()
+{
+    int i;
+
+    for (i = 0; i < N; i++)
+    {
+        xx[i] += DT * vxx[i];
+        yy[i] += DT * vyy[i];
+        zz[i] += DT * vzz[i];
+        vxx[i] += DT * Fxx[i] / M;
+        vyy[i] += DT * Fyy[i] / M;
+        vzz[i] += DT * Fzz[i] / M;
+    }
+
+    eval_nbrs();
+    eval_forces();
+}
+
 void thermalization()
 {
     int i;
@@ -280,4 +311,35 @@ void thermalization()
 
     for (i = 0; i * DT < TERM_TIME; i++)
         verlet_evolution();
+}
+
+void eval_coefficients()
+{
+    double a, b, c, d, e, f, g, h;
+
+    a = (1 / (powerd(RC - RP, 7) * powerd(RP, 12))) * 4 * EPS * powerd(RC, 4) * powerd(SIGMA, 6) * (2 * powerd(RP, 6) * (-42 * powerd(RC, 3) + 182 * powerd(RC, 2) * RP - 273 * RC * powerd(RP, 2) + 143 * powerd(RP, 3)) + (455 * powerd(RC, 3) - 1729 * powerd(RC, 2) * RP + 2223 * RC * powerd(RP, 2) - 969 * powerd(RP, 3)) * powerd(SIGMA, 6));
+    b = (1 / (powerd(RC - RP, 7) * powerd(RP, 13))) * 16 * EPS * powerd(RC, 3) * powerd(SIGMA, 6) * (powerd(RP, 6) * (54 * powerd(RC, 4) - 154 * powerd(RC, 3) * RP + 351 * RC * powerd(RP, 3) - 286 * powerd(RP, 4)) + (-315 * powerd(RC, 4) + 749 * powerd(RC, 3) * RP + 171 * powerd(RC, 2) * powerd(RP, 2) - 1539 * RC * powerd(RP, 3) + 969 * powerd(RP, 4)) * powerd(SIGMA, 6));
+    c = (1 / (powerd(RC - RP, 7) * powerd(RP, 14))) * 12 * EPS * powerd(RC, 2) * powerd(SIGMA, 6) * (powerd(RP, 6) * (-63 * powerd(RC, 5) - 7 * powerd(RC, 4) * RP + 665 * powerd(RC, 3) * powerd(RP, 2) - 975 * powerd(RC, 2) * powerd(RP, 3) - 52 * RC * powerd(RP, 4) + 572 * powerd(RP, 5)) + 2 * (195 * powerd(RC, 5) + 91 * powerd(RC, 4) * RP - 1781 * powerd(RC, 3) * powerd(RP, 2) + 1995 * powerd(RC, 2) * powerd(RP, 3) + 399 * RC * powerd(RP, 4) - 969 * powerd(RP, 5)) * powerd(SIGMA, 6));
+    d = (1 / (powerd(RC - RP, 7) * powerd(RP, 15))) * 16 * EPS * powerd(SIGMA, 6) * (RC * powerd(RP, 6) * (14 * powerd(RC, 6) + 126 * powerd(RC, 5) * RP - 420 * powerd(RC, 4) * powerd(RP, 2) - 90 * powerd(RC, 3) * powerd(RP, 3) + 1105 * powerd(RC, 2) * powerd(RP, 4) - 624 * RC * powerd(RP, 5) - 286 * powerd(RP, 6)) + RC * (-91 * powerd(RC, 6) - 819 * powerd(RC, 5) * RP + 2145 * powerd(RC, 4) * powerd(RP, 2) + 1125 * powerd(RC, 3) * powerd(RP, 3) - 5035 * powerd(RC, 2) * powerd(RP, 4) + 1881 * RC * powerd(RP, 5) + 969 * powerd(RP, 6)) * powerd(SIGMA, 6));
+    e = (1 / (powerd(RC - RP, 7) * powerd(RP, 15))) * 4 * EPS * powerd(SIGMA, 6) * (2 * powerd(RP, 6) * (-112 * powerd(RC, 6) - 63 * powerd(RC, 5) * RP + 1305 * powerd(RC, 4) * powerd(RP, 2) - 1625 * powerd(RC, 3) * powerd(RP, 3) - 585 * powerd(RC, 2) * powerd(RP, 4) + 1287 * RC * powerd(RP, 5) + 143 * powerd(RP, 6)) + (1456 * powerd(RC, 6) + 1404 * powerd(RC, 5) * RP - 14580 * powerd(RC, 4) * powerd(RP, 2) + 13015 * powerd(RC, 3) * powerd(RP, 3) + 7695 * powerd(RC, 2) * powerd(RP, 4) - 8721 * RC * powerd(RP, 5) - 969 * powerd(RP, 6)) * powerd(SIGMA, 6));
+    f = (1 / (powerd(RC - RP, 7) * powerd(RP, 15))) * 48 * EPS * powerd(SIGMA, 6) * (-powerd(RP, 6) * (-28 * powerd(RC, 5) + 63 * powerd(RC, 4) * RP + 65 * powerd(RC, 3) * powerd(RP, 2) - 247 * powerd(RC, 2) * powerd(RP, 3) + 117 * RC * powerd(RP, 4) + 65 * powerd(RP, 5)) + (-182 * powerd(RC, 5) + 312 * powerd(RC, 4) * RP + 475 * powerd(RC, 3) * powerd(RP, 2) - 1140 * powerd(RC, 2) * powerd(RP, 3) + 342 * RC * powerd(RP, 4) + 228 * powerd(RP, 5)) * powerd(SIGMA, 6));
+    g = (1 / (powerd(RC - RP, 7) * powerd(RP, 15))) * 4 * EPS * powerd(SIGMA, 6) * (powerd(RP, 6) * (-224 * powerd(RC, 4) + 819 * powerd(RC, 3) * RP - 741 * powerd(RC, 2) * powerd(RP, 2) - 429 * RC * powerd(RP, 3) + 715 * powerd(RP, 4)) + 2 * (728 * powerd(RC, 4) - 2223 * powerd(RC, 3) * RP + 1425 * powerd(RC, 2) * powerd(RP, 2) + 1292 * RC * powerd(RP, 3) - 1292 * powerd(RP, 4)) * powerd(SIGMA, 6));
+    h = (1 / (powerd(RC - RP, 7) * powerd(RP, 15))) * 16 * EPS * powerd(SIGMA, 6) * (powerd(RP, 6) * (14 * powerd(RC, 3) - 63 * powerd(RC, 2) * RP + 99 * RC * powerd(RP, 2) - 55 * powerd(RP, 3)) + (-91 * powerd(RC, 3) + 351 * powerd(RC, 2) * RP - 459 * RC * powerd(RP, 2) + 204 * powerd(RP, 3)) * powerd(SIGMA, 6));
+
+    printf("#define A ");
+    printf("%.15e\n", a);
+    printf("#define B ");
+    printf("%.15e\n", b);
+    printf("#define C ");
+    printf("%.15e\n", c);
+    printf("#define D ");
+    printf("%.15e\n", d);
+    printf("#define E ");
+    printf("%.15e\n", e);
+    printf("#define F ");
+    printf("%.15e\n", f);
+    printf("#define G ");
+    printf("%.15e\n", g);
+    printf("#define H ");
+    printf("%.15e\n", h);
 }

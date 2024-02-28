@@ -2,6 +2,7 @@
 #define LATTICE_H
 
 double powerd(double x, int y);
+void free_all();
 void load_data(char file_name[]);
 double eval_nn_distance();
 double eval_U();
@@ -11,6 +12,8 @@ double eval_K();
 double eval_temperature();
 void eval_forces();
 void verlet_evolution();
+void euler_evolution();
 void thermalization();
+void eval_coefficients();
 
 #endif /*LATTICE_H*/

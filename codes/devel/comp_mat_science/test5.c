@@ -33,11 +33,22 @@ int main(int argc, char *argv[])
 
     for (i = 0; i * DT < TOT_TIME; i++)
     {
-        fprintf(fd, "%.15e %.15e %.15e %15e\n", i * DT, eval_K() + eval_U(), eval_temperature(), vxx[i]);
+        fprintf(fd, "%.15e %.15e %15e\n", i * DT, eval_K() + eval_U(), eval_temperature());
         verlet_evolution();
     }
 
     fclose(fd);
+
+    sprintf(file_name, "../../data/test_files/velocity_x.dat");
+    fd = fopen(file_name, "w");
+
+    for (i = 0; i < N; i++)
+        fprintf(fd, "%.15e\n", vxx[i]);
+
+    fclose(fd);
+    printf("%.15e\n", eval_temperature());
+
+    free_all();
 
     return 0;
 }
