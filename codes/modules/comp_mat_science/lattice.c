@@ -3,25 +3,63 @@
  *
  * Library lattice.c
  *
- * The externally accessible functions are
+ * The externally accessible functions are:
+ *
+ *  double powerd(double x, int y)
+ *      Evaluates x^y, faster than pow from math.h.
  *
  *  void load_data(char file_name[])
- *      Load the data from the file file_name into global xx, yy and zz.
+ *      Load the atom positions from the file "file_name"
+ *      into global variables xx, yy and zz.
  *
  *  double eval_nn_distance()
- *      Evaluates the nn distance of a lattice
+ *      Evaluates the nearest neighbours distance of the lattice.
+ *
+ *  void eval_nbrs(int *number_nbrs, int **number_nbrs)
+ *      Evaluates the number of neighbors of the atom i (number_nbrs[i]) and
+ *      the list of their indexes (which_nbrs[i]). which_nbrs[i] has lenght
+ *      number_nbrs[i].
  *
  *  double eval_U()
  *      Evaluates the potential energy of the lattice using Lennard Jones
- *      potential. It sums only on neighbors.
+ *      potential with smooth junction. It sums only on neighbors (r<RC).
+ *      Between RP and RC the potential is a seventh order polinomial that
+ *      brings smootlhy the potential to zero. To remove the junction
+ *      (sharp cutoff approach) it is sufficient to set RP>RC.
  *
- *  void eval_nbrs(int *number_nbrs, int **number_nbrs)
- *      Evaluates the number of neighbors of the atom i number_nbrs[i] and
- *      the list of their indexes which_nbrs[i]. which_nbrs[i] has lenght
- *      number_nbrs[i]. It is care of the user to allocate number_nbrs and
- *      number_nbrs of the correct dimension and to eventually free them.
+ *  double eval_K()
+ *      Evaluates the kinetic energy of the lattice.
  *
+ *  double eval_temperature()
+ *      Evaluates the temperature of the lattice.
  *
+ *  void generate_inital_v()
+ *      Generates inital velocities sampling from a uniform distribution.
+ *      Velocities are generated to have a initial temperature T_INIT and
+ *      a stationary centre of mass of the lattice.
+ *
+ *  void eval_forces()
+ *      Evaluates forces acting on each atom of the lattice due to the
+ *      potential (LJ with smooth junction). It sums only on neighbors (r<RC).
+ *
+ *  void verlet_evolution()
+ *      Evolves the system of a time step DT, using Verlet algorithm.
+ *
+ *  void euler_evolution()
+ *      Evolves the system of a time step DT, using Euler algorithm.
+ *
+ *  void thermalization()
+ *      Thermalizes the system evolving the system for TERM_TIME seconds.
+ *      It automatically generates the initial velocities.
+ *
+ *  void eval_coefficients()
+ *      Calculates the coefficients of the polynomial junction given RC and RP.
+ *
+ *  void print_potential()
+ *      Print on file the Lennard Jones potential with junction.
+ *
+ *  void free_all()
+ *      Fress all dynamically allocated memory.
  *
  * Author: Lorenzo Tasca
  *
@@ -117,7 +155,7 @@ double eval_nn_distance()
 
 static double lennard_jones(double r)
 {
-
+    assert(r < RC);
     if (r < RP)
         return 4 * EPS * (powerd(SIGMA / r, 12) - powerd(SIGMA / r, 6));
     else
@@ -249,9 +287,19 @@ void eval_forces()
         {
             k = which_nbrs[i][j];
             r = eval_dist(xx[i], yy[i], zz[i], xx[k], yy[k], zz[k]);
-            Fxx[i] += 24 * EPS * powerd(SIGMA, 6) * powerd(r, -8) * eval_dist1D(xx[i], xx[k]) * (2 * powerd(SIGMA, 6) * powerd(r, -6) - 1);
-            Fyy[i] += 24 * EPS * powerd(SIGMA, 6) * powerd(r, -8) * eval_dist1D(yy[i], yy[k]) * (2 * powerd(SIGMA, 6) * powerd(r, -6) - 1);
-            Fzz[i] += 24 * EPS * powerd(SIGMA, 6) * powerd(r, -8) * eval_dist1D(zz[i], zz[k]) * (2 * powerd(SIGMA, 6) * powerd(r, -6) - 1);
+            assert(r < RC);
+            if (r < RP)
+            {
+                Fxx[i] += 24 * EPS * powerd(SIGMA, 6) * powerd(r, -8) * eval_dist1D(xx[i], xx[k]) * (2 * powerd(SIGMA, 6) * powerd(r, -6) - 1);
+                Fyy[i] += 24 * EPS * powerd(SIGMA, 6) * powerd(r, -8) * eval_dist1D(yy[i], yy[k]) * (2 * powerd(SIGMA, 6) * powerd(r, -6) - 1);
+                Fzz[i] += 24 * EPS * powerd(SIGMA, 6) * powerd(r, -8) * eval_dist1D(zz[i], zz[k]) * (2 * powerd(SIGMA, 6) * powerd(r, -6) - 1);
+            }
+            else
+            {
+                Fxx[i] -= eval_dist1D(xx[i], xx[k]) * (B * powerd(r, -1) + 2 * C + 3 * D * r + 4 * E * powerd(r, 2) + 5 * F * powerd(r, 3) + 6 * G * powerd(r, 4) + 7 * H * powerd(r, 5));
+                Fyy[i] -= eval_dist1D(yy[i], yy[k]) * (B * powerd(r, -1) + 2 * C + 3 * D * r + 4 * E * powerd(r, 2) + 5 * F * powerd(r, 3) + 6 * G * powerd(r, 4) + 7 * H * powerd(r, 5));
+                Fzz[i] -= eval_dist1D(zz[i], zz[k]) * (B * powerd(r, -1) + 2 * C + 3 * D * r + 4 * E * powerd(r, 2) + 5 * F * powerd(r, 3) + 6 * G * powerd(r, 4) + 7 * H * powerd(r, 5));
+            }
         }
     }
 }
@@ -342,4 +390,24 @@ void eval_coefficients()
     printf("%.15e\n", g);
     printf("#define H ");
     printf("%.15e\n", h);
+}
+
+void print_potential()
+{
+    double r;
+    char file_name[100];
+    FILE *fd;
+
+    r = 2.5;
+
+    sprintf(file_name, "../../data/test_files/potential.dat");
+    fd = fopen(file_name, "w");
+
+    while (r < RC)
+    {
+        fprintf(fd, "%.15e %.15e\n", r, lennard_jones(r));
+        r += 0.0001;
+    }
+
+    fclose(fd);
 }

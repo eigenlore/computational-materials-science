@@ -15,5 +15,6 @@ void verlet_evolution();
 void euler_evolution();
 void thermalization();
 void eval_coefficients();
+void print_potential();
 
 #endif /*LATTICE_H*/

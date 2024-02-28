@@ -1,7 +1,7 @@
 
 /*******************************************************************************
  *
- * File test4.c
+ * File test5.c
  *
  * Print on file energy and temperature at each time step.
  *
