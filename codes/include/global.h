@@ -27,7 +27,7 @@
 #define KB 0.00008618460742911316 /*eV/K*/
 #define M 11.205e-27              /*kg*/
 #define DT 1e-15                  /*seconds*/
-#define T_INIT 1600                /*Kelvin*/
+#define T_INIT 1550               /*Kelvin*/
 #define TERM_TIME 3e-12           /*seconds*/
 #define TOT_TIME 10e-12           /*seconds*/
 #define PBC 1                     /*1 with PBC, 0 without*/
