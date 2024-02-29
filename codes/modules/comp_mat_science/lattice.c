@@ -117,12 +117,12 @@ void load_data(char file_name[])
     fclose(file);
 }
 
-static double eval_dist1D(double a, double b)
+static double eval_dist1D(double a, double b, int pbc)
 {
     double res;
 
     res = a - b;
-    if (PBC)
+    if (pbc)
         res -= SIZE * floor(res / SIZE + 0.5);
 
     return res;
@@ -130,7 +130,7 @@ static double eval_dist1D(double a, double b)
 
 static double eval_dist(double x1, double y1, double z1, double x2, double y2, double z2)
 {
-    return sqrt(eval_dist1D(x1, x2) * eval_dist1D(x1, x2) + eval_dist1D(y1, y2) * eval_dist1D(y1, y2) + eval_dist1D(z1, z2) * eval_dist1D(z1, z2));
+    return sqrt(eval_dist1D(x1, x2, PBCX) * eval_dist1D(x1, x2, PBCX) + eval_dist1D(y1, y2, PBCY) * eval_dist1D(y1, y2, PBCY) + eval_dist1D(z1, z2, PBCZ) * eval_dist1D(z1, z2, PBCZ));
 }
 
 double eval_nn_distance()
@@ -290,15 +290,15 @@ void eval_forces()
             assert(r < RC);
             if (r < RP)
             {
-                Fxx[i] += 24 * EPS * powerd(SIGMA, 6) * powerd(r, -8) * eval_dist1D(xx[i], xx[k]) * (2 * powerd(SIGMA, 6) * powerd(r, -6) - 1);
-                Fyy[i] += 24 * EPS * powerd(SIGMA, 6) * powerd(r, -8) * eval_dist1D(yy[i], yy[k]) * (2 * powerd(SIGMA, 6) * powerd(r, -6) - 1);
-                Fzz[i] += 24 * EPS * powerd(SIGMA, 6) * powerd(r, -8) * eval_dist1D(zz[i], zz[k]) * (2 * powerd(SIGMA, 6) * powerd(r, -6) - 1);
+                Fxx[i] += 24 * EPS * powerd(SIGMA, 6) * powerd(r, -8) * eval_dist1D(xx[i], xx[k], PBCX) * (2 * powerd(SIGMA, 6) * powerd(r, -6) - 1);
+                Fyy[i] += 24 * EPS * powerd(SIGMA, 6) * powerd(r, -8) * eval_dist1D(yy[i], yy[k], PBCY) * (2 * powerd(SIGMA, 6) * powerd(r, -6) - 1);
+                Fzz[i] += 24 * EPS * powerd(SIGMA, 6) * powerd(r, -8) * eval_dist1D(zz[i], zz[k], PBCZ) * (2 * powerd(SIGMA, 6) * powerd(r, -6) - 1);
             }
             else
             {
-                Fxx[i] -= eval_dist1D(xx[i], xx[k]) * (B * powerd(r, -1) + 2 * C + 3 * D * r + 4 * E * powerd(r, 2) + 5 * F * powerd(r, 3) + 6 * G * powerd(r, 4) + 7 * H * powerd(r, 5));
-                Fyy[i] -= eval_dist1D(yy[i], yy[k]) * (B * powerd(r, -1) + 2 * C + 3 * D * r + 4 * E * powerd(r, 2) + 5 * F * powerd(r, 3) + 6 * G * powerd(r, 4) + 7 * H * powerd(r, 5));
-                Fzz[i] -= eval_dist1D(zz[i], zz[k]) * (B * powerd(r, -1) + 2 * C + 3 * D * r + 4 * E * powerd(r, 2) + 5 * F * powerd(r, 3) + 6 * G * powerd(r, 4) + 7 * H * powerd(r, 5));
+                Fxx[i] -= eval_dist1D(xx[i], xx[k], PBCX) * (B * powerd(r, -1) + 2 * C + 3 * D * r + 4 * E * powerd(r, 2) + 5 * F * powerd(r, 3) + 6 * G * powerd(r, 4) + 7 * H * powerd(r, 5));
+                Fyy[i] -= eval_dist1D(yy[i], yy[k], PBCY) * (B * powerd(r, -1) + 2 * C + 3 * D * r + 4 * E * powerd(r, 2) + 5 * F * powerd(r, 3) + 6 * G * powerd(r, 4) + 7 * H * powerd(r, 5));
+                Fzz[i] -= eval_dist1D(zz[i], zz[k], PBCZ) * (B * powerd(r, -1) + 2 * C + 3 * D * r + 4 * E * powerd(r, 2) + 5 * F * powerd(r, 3) + 6 * G * powerd(r, 4) + 7 * H * powerd(r, 5));
             }
         }
     }

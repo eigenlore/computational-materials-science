@@ -26,11 +26,13 @@
 #define RP 4.2                    /*A*/
 #define KB 0.00008618460742911316 /*eV/K*/
 #define M 11.205e-27              /*kg*/
-#define DT 1e-15                  /*seconds*/
-#define T_INIT 1550               /*Kelvin*/
+#define DT 4e-15                  /*seconds*/
+#define T_INIT 380                /*Kelvin*/
 #define TERM_TIME 3e-12           /*seconds*/
-#define TOT_TIME 10e-12           /*seconds*/
-#define PBC 1                     /*1 with PBC, 0 without*/
+#define TOT_TIME 50e-12           /*seconds*/
+#define PBCX 0                    /*1 with PBC, 0 without*/
+#define PBCY 0                    /*1 with PBC, 0 without*/
+#define PBCZ 0                    /*1 with PBC, 0 without*/
 #define SIZE 16.641600            /*A*/
 #define A 1.762150591975983e+08
 #define B -2.840236130038733e+08
