@@ -26,12 +26,13 @@ int main(int argc, char *argv[])
     sprintf(file_name, "../data/input_files/fcc100a%d.dat", N);
     load_data(file_name);
 
-    thermalization();
+    sprintf(file_name, "../data/ex1_part1/1d/force_and_U.dat");
+    steepest_descent(file_name);
 
-
-
-    sprintf(file_name, "../data/ex1_part1/1abc/energy_temperature.dat");
+    sprintf(file_name, "../data/ex1_part1/1d/energy_temperature.dat");
     fd = fopen(file_name, "w");
+
+    thermalization();
 
     for (i = 0; i * DT < TOT_TIME; i++)
     {

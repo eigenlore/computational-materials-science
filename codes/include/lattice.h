@@ -18,5 +18,7 @@ void eval_coefficients();
 void print_potential();
 double *eval_L();
 double *eval_v_cm();
+double eval_max_force();
+void steepest_descent(char file_name[]);
 
 #endif /*LATTICE_H*/

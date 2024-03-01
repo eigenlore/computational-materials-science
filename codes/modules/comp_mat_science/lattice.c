@@ -456,3 +456,51 @@ double *eval_v_cm()
     return v_cm;
 }
 
+double eval_max_force()
+{
+    int i;
+    double max_force, temp;
+
+    max_force = 0;
+
+    for (i = 0; i < N; i++)
+    {
+        temp = sqrt(Fxx[i] * Fxx[i] + Fyy[i] * Fyy[i] + Fzz[i] * Fzz[i]);
+        if (temp > max_force)
+            max_force = temp;
+    }
+
+    return max_force;
+}
+
+void steepest_descent(char file_name[])
+{
+    int i;
+    FILE *fd;
+    double max_force;
+
+    fd = fopen(file_name, "w");
+
+    eval_nbrs();
+    eval_forces();
+    max_force = eval_max_force();
+    fprintf(fd, "%.15e %.15e\n", max_force, eval_U());
+
+    while (max_force > MAX_FORCE)
+    {
+        for (i = 0; i < N; i++)
+        {
+            xx[i] += C_STEEP * Fxx[i];
+            yy[i] += C_STEEP * Fyy[i];
+            zz[i] += C_STEEP * Fzz[i];
+        }
+
+        eval_nbrs();
+        eval_forces();
+        max_force = eval_max_force();
+
+        fprintf(fd, "%.15e %.15e\n", max_force, eval_U());
+    }
+
+    fclose(fd);
+}
