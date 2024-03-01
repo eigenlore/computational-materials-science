@@ -29,7 +29,7 @@
 #define DT 4e-15                  /*seconds*/
 #define T_INIT 380                /*Kelvin*/
 #define TERM_TIME 3e-12           /*seconds*/
-#define TOT_TIME 50e-12           /*seconds*/
+#define TOT_TIME 1e-9           /*seconds*/
 #define PBCX 0                    /*1 with PBC, 0 without*/
 #define PBCY 0                    /*1 with PBC, 0 without*/
 #define PBCZ 0                    /*1 with PBC, 0 without*/

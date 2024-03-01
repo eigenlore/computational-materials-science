@@ -411,3 +411,48 @@ void print_potential()
 
     fclose(fd);
 }
+
+double *eval_L()
+{
+    int i;
+    double *L;
+
+    L = (double *)malloc(3 * sizeof(double));
+    L[0] = 0;
+    L[1] = 0;
+    L[2] = 0;
+
+    for (i = 0; i < N; i++)
+    {
+        L[0] += yy[i] * vzz[i] - zz[i] * vyy[i];
+        L[1] += zz[i] * vxx[i] - xx[i] * vzz[i];
+        L[2] += xx[i] * vyy[i] - yy[i] * vxx[i];
+    }
+
+    L[0] *= M;
+    L[1] *= M;
+    L[2] *= M;
+
+    return L;
+}
+
+double *eval_v_cm()
+{
+    int i;
+    double *v_cm;
+
+    v_cm = (double *)malloc(3 * sizeof(double));
+    v_cm[0] = 0;
+    v_cm[1] = 0;
+    v_cm[2] = 0;
+
+    for (i = 0; i < N; i++)
+    {
+        v_cm[0] += vxx[i];
+        v_cm[1] += vyy[i];
+        v_cm[2] += vzz[i];
+    }
+
+    return v_cm;
+}
+

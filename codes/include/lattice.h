@@ -16,5 +16,7 @@ void euler_evolution();
 void thermalization();
 void eval_coefficients();
 void print_potential();
+double *eval_L();
+double *eval_v_cm();
 
 #endif /*LATTICE_H*/
