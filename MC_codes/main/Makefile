@@ -19,7 +19,7 @@ all: rmxeq mkdep mkxeq
 
 # main programs and required modules 
 
-MAIN = ex1_part1_1abc ex1_part1_2a ex1_part2_3a ex1_part3_5a ex1_part3_6a ex1_part2_4a ex1_part1_1d 
+MAIN =  
 
 RANDOM = ranlxs ranlxd gauss
 
@@ -27,7 +27,7 @@ START = start utils
 
 EXTRAS = 
 
-COMP_MAT_SCIENCE = lattice
+COMP_MAT_SCIENCE = montecarlo
 
 MODULES = $(RANDOM) $(START) $(EXTRAS) $(COMP_MAT_SCIENCE)
 

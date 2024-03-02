@@ -19,7 +19,7 @@ all: rmxeq mkdep mkxeq
 
 # main programs and required modules 
 
-MAIN = test1 test2 test3 test4 test5 coeff print_potential print_all
+MAIN = 
 
 RANDOM = ranlxs ranlxd gauss
 
@@ -27,7 +27,7 @@ START = start utils
 
 EXTRAS = 
 
-COMP_MAT_SCIENCE = lattice
+COMP_MAT_SCIENCE = montecarlo
 
 
 
