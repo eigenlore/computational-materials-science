@@ -19,7 +19,7 @@ all: rmxeq mkdep mkxeq
 
 # main programs and required modules 
 
-MAIN =  
+MAIN = ex2_part_a ex2_part_b ex2_part_c  
 
 RANDOM = ranlxs ranlxd gauss
 
@@ -103,7 +103,7 @@ rmxeq:
 	@ -rm -f $(MAIN); \
         echo "delete old executables"		
 
-
+	
 # make dependencies
 
 mkdep:  $(addsuffix .d,$(PGMS))
