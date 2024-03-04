@@ -19,7 +19,7 @@ all: rmxeq mkdep mkxeq
 
 # main programs and required modules 
 
-MAIN = ex2_part_a ex2_part_b ex2_part_c  
+MAIN = ex2_part_a ex2_part_b ex2_part_c ex2_part_d 
 
 RANDOM = ranlxs ranlxd gauss
 

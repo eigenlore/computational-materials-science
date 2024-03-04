@@ -1,7 +1,7 @@
 
 /*******************************************************************************
  *
- * File ex2_part_a.c
+ * File ex2_part_d.c
  *
  * General tests function.
  *
@@ -29,21 +29,21 @@ int main(int argc, char *argv[])
     else
         seed = time(NULL);
 
-    sprintf(file_name, "../data/ex2_part_a/seed.dat");
+    sprintf(file_name, "../data/ex2_part_d/seedJ0%.1fT%d.dat", J0, T);
     fd = fopen(file_name, "w");
     fprintf(fd, "%d\n", seed);
     fclose(fd);
 
-    sprintf(file_name, "../data/ex2_part_a/thermalization_energy.dat");
+    sprintf(file_name, "../data/ex2_part_d/thermalization_energyJ0%.1fT%d.dat", J0, T);
 
     thermalization(file_name);
 
-    sprintf(file_name, "../data/ex2_part_a/energy_and_nbrs.dat");
+    sprintf(file_name, "../data/ex2_part_d/energy_and_nbrsJ0%.1fT%d.dat", J0, T);
     fd = fopen(file_name, "w");
 
     for (i = 0; i < N_SWEEP; i++)
     {
-        fprintf(fd, "%.15e %.15e \n", eval_E(), mean_number_of_nbrs());
+        fprintf(fd, "%.15e %.15e %d\n", eval_E(), mean_number_of_nbrs(), count_first_layer());
         sweep();
     }
 
