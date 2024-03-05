@@ -400,7 +400,7 @@ int number_of_nbrs(int i, int j, int k)
                occupation_matrix[down_nbrs[i][j][k][0]][down_nbrs[i][j][k][1]][down_nbrs[i][j][k][2]] +
                occupation_matrix[top_nbrs[i][j][k][0]][top_nbrs[i][j][k][1]][top_nbrs[i][j][k][2]];
 
-    case LZ: /*it has no top neighbours*/
+    case LZ - 1: /*it has no top neighbours*/
         return occupation_matrix[left_nbrs[i][j][k][0]][left_nbrs[i][j][k][1]][left_nbrs[i][j][k][2]] +
                occupation_matrix[right_nbrs[i][j][k][0]][right_nbrs[i][j][k][1]][right_nbrs[i][j][k][2]] +
                occupation_matrix[up_nbrs[i][j][k][0]][up_nbrs[i][j][k][1]][up_nbrs[i][j][k][2]] +
@@ -546,7 +546,6 @@ void thermalization(char file_name[])
 
     fclose(fd);
 }
-
 
 void thermalization_first_layer(char file_name[])
 {
