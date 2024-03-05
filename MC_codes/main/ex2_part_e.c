@@ -1,7 +1,7 @@
 
 /*******************************************************************************
  *
- * File ex2_part_a.c
+ * File ex2_part_e.c
  *
  * General tests function.
  *
@@ -29,28 +29,25 @@ int main(int argc, char *argv[])
     else
         seed = time(NULL);
 
-    sprintf(file_name, "../data/ex2_part_b/seedN%d.dat", N);
+    sprintf(file_name, "../data/ex2_part_e/seedJ0%.1fT%d.dat", J0, T);
     fd = fopen(file_name, "w");
     fprintf(fd, "%d\n", seed);
     fclose(fd);
 
-    sprintf(file_name, "../data/ex2_part_b/thermalization_energyN%d.dat", N);
+    sprintf(file_name, "../data/ex2_part_e/thermalization_energyJ0%.1fT%d.dat", J0, T);
 
-    thermalization(file_name);
+    thermalization_first_layer(file_name);
 
-    sprintf(file_name, "../data/ex2_part_b/energy_and_nbrsN%d.dat", N);
+    sprintf(file_name, "../data/ex2_part_e/energy_and_nbrsJ0%.1fT%d.dat", J0, T);
     fd = fopen(file_name, "w");
 
     for (i = 0; i < N_SWEEP; i++)
     {
-        fprintf(fd, "%.15e %.15e \n", eval_E(), mean_number_of_nbrs());
+        fprintf(fd, "%.15e %.15e %d\n", eval_E(), mean_number_of_nbrs(), count_first_layer());
         sweep();
     }
 
     fclose(fd);
-
-    sprintf(file_name, "../data/ex2_part_b/final_confN%d.dat", N);
-    print_configuration(file_name);
 
     return 0;
 }

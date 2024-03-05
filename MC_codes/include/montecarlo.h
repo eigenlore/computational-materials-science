@@ -17,6 +17,8 @@ int number_of_nbrs(int i, int j);
 #ifdef DIM3
 int number_of_nbrs(int i, int j, int k);
 int count_first_layer();
+void init_configuration_first_layer();
+void thermalization_first_layer(char file_name[]);
 #endif /*DIM3*/
 
 #endif /*MONTECARLO_H*/

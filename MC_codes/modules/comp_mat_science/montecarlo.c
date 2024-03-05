@@ -7,27 +7,33 @@
  *
  * double powerd(double x, int y)
  *  Calculates x^y, faster then matt.h pow.
- * 
+ *
  * void init_configuration()
  *  Initialized thee configuration with random initial positions.
- * 
+ *
  * void eval_list_nbrs()
  *  Calculates the coordinate of neighbours of each cell.
- *  
+ *
  * void print_configuration(char file_name[])
- *  Print the coordinates of all atom in file_name. 
- * 
+ *  Print the coordinates of all atom in file_name.
+ *
  * double eval_E()
- *  Evaluates the energy of the system. 
- * 
+ *  Evaluates the energy of the system.
+ *
  * double mean_number_of_nbrs()
  *  Evaluates the mean number of neighbours over all the atoms.
- * 
+ *
  * void sweep()
  *  Perform a sweep (a Metropolis-Montecarlo move).
- * 
+ *
  * void thermalization(char file_name[]);
- *  Thermalizes the system and saves the energy in file_name. 
+ *  Thermalizes the system and saves the energy in file_name.
+ *
+ * number_of_nbrs(int i, int j, int k)
+ *  Number of neighbours of the cell (i,j,k).
+ *
+ * count_first_layer()
+ *  Counts the number of atom in the lowest layer.
  *
  * Author: Lorenzo Tasca
  *
@@ -300,6 +306,43 @@ void init_configuration()
     }
 }
 
+void init_configuration_first_layer()
+{
+    int i, j, k, x, y, z;
+    double r;
+
+    eval_list_nbrs();
+
+    rlxd_init(1, seed);
+
+    for (i = 0; i < LX; i++)
+        for (j = 0; j < LY; j++)
+            for (k = 0; k < LZ; k++)
+                occupation_matrix[i][j][k] = 0;
+
+    i = 0;
+
+    while (i < N)
+    {
+        ranlxd(&r, 1);
+        x = (int)(r * LX);
+        ranlxd(&r, 1);
+        y = (int)(r * LY);
+        z = 0; /*forcing the atoms to be in the first layer*/
+        assert(x < LX);
+        assert(y < LY);
+
+        if (occupation_matrix[x][y][z] == 0)
+        {
+            occupation_matrix[x][y][z] = 1;
+            atom_position[i][0] = x;
+            atom_position[i][1] = y;
+            atom_position[i][2] = z;
+            i++;
+        }
+    }
+}
+
 void eval_list_nbrs()
 {
     int i, j, k;
@@ -494,6 +537,26 @@ void thermalization(char file_name[])
 
     eval_list_nbrs();
     init_configuration();
+
+    for (i = 0; i < N_TERM; i++)
+    {
+        fprintf(fd, "%.15e\n", eval_E());
+        sweep();
+    }
+
+    fclose(fd);
+}
+
+
+void thermalization_first_layer(char file_name[])
+{
+    int i;
+    FILE *fd;
+
+    fd = fopen(file_name, "w");
+
+    eval_list_nbrs();
+    init_configuration_first_layer();
 
     for (i = 0; i < N_TERM; i++)
     {

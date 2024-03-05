@@ -34,16 +34,16 @@
 #define GLOBAL_H
 
 #define KB 0.00008618460742911316 /*eV/K*/
-#define LX 25
-#define LY 25
+#define LX 35
+#define LY 35
 #define LZ 10
-#define N 27
+#define N 25
 #define J0 -0.4 /*eV*/
 #define J1 -0.2 /*eV*/
-#define N_SWEEP 500000
-#define T 500 /*K*/
-#define N_TERM 200
-#define DIM3
+#define N_SWEEP 1000000
+#define T 1904 /*K*/
+#define N_TERM 200000
+#define DIM2
 
 #ifdef MAIN_PROGRAM
 #define EXTERN

@@ -49,5 +49,8 @@ int main(int argc, char *argv[])
 
     fclose(fd);
 
+    sprintf(file_name, "../data/ex2_part_c/final_conf%dT%d.dat", LX, T);
+    print_configuration(file_name);
+
     return 0;
 }
