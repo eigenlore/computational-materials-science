@@ -35,7 +35,6 @@ int main(int argc, char *argv[])
     fclose(fd);
 
     sprintf(file_name, "../data/ex2_part_e/thermalization_energyJ0%.1fT%d.dat", J0, T);
-
     thermalization_first_layer(file_name);
 
     sprintf(file_name, "../data/ex2_part_e/energy_and_nbrsJ0%.1fT%d.dat", J0, T);
@@ -48,6 +47,9 @@ int main(int argc, char *argv[])
     }
 
     fclose(fd);
+
+    sprintf(file_name, "../data/ex2_part_e/final_configJ0%.1fT%d.dat", J0, T);
+    print_configuration(file_name);
 
     return 0;
 }
