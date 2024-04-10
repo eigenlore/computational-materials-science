@@ -19,9 +19,9 @@
 
 int main(int argc, char *argv[])
 {
-    int i;
+    int i, j;
     char file_name[100];
-    FILE *fd;
+    FILE *fd1, *fd2;
 
     sprintf(file_name, "../data/input_files/fcc100a%d.dat", N);
     load_data(file_name);
@@ -29,23 +29,23 @@ int main(int argc, char *argv[])
     thermalization();
 
     sprintf(file_name, "../data/ex1_part1/1abc/velocities.dat");
-    fd = fopen(file_name, "w");
-
-    for (i = 0; i < N; i++)
-        fprintf(fd, "%.15e %.15e %.15e\n", vxx[i], vyy[i], vzz[i]);
-
-    fclose(fd);
+    fd1 = fopen(file_name, "w");
 
     sprintf(file_name, "../data/ex1_part1/1abc/energy_temperature.dat");
-    fd = fopen(file_name, "w");
+    fd2 = fopen(file_name, "w");
 
     for (i = 0; i * DT < TOT_TIME; i++)
     {
-        fprintf(fd, "%.15e %.15e %.15e\n", i * DT, eval_K() + eval_U(), eval_temperature());
+        if (i % 100)
+            for (j = 0; j < N; j++)
+                fprintf(fd1, "%.15e %.15e %.15e\n", vxx[j], vyy[j], vzz[j]);
+
+        fprintf(fd2, "%.15e %.15e %.15e\n", i * DT, eval_K() + eval_U(), eval_temperature());
         verlet_evolution();
     }
 
-    fclose(fd);
+    fclose(fd1);
+    fclose(fd2);
 
     free_all();
 
