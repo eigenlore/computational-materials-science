@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.3.18)  9 APR 2024 20:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.3.18)  10 APR 2024 14:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -745,11 +745,11 @@ Package pdftex.def Info: images/force.png  used on input line 73.
 [5
 
  <./images/force.png>]
-<images/tempforce.png, id=64, 416.2752pt x 327.3831pt>
+<images/tempforce.png, id=64, 406.8801pt x 327.3831pt>
 File: images/tempforce.png Graphic file (type png)
 <use images/tempforce.png>
 Package pdftex.def Info: images/tempforce.png  used on input line 84.
-(pdftex.def)             Requested size: 215.10196pt x 169.17116pt.
+(pdftex.def)             Requested size: 215.10196pt x 173.0726pt.
  [6
 
  <./images/tempforce.png>]
@@ -777,37 +777,86 @@ Package pdftex.def Info: images/lowertimestepamazing.png  used on input line 120
  [9
 
  <./images/lowertimestepamazing.png>]
-<images/thumbnail.png, id=94, 1439.3775pt x 1083.04625pt>
-File: images/thumbnail.png Graphic file (type png)
-<use images/thumbnail.png>
-Package pdftex.def Info: images/thumbnail.png  used on input line 129.
-(pdftex.def)             Requested size: 215.10196pt x 161.83847pt.
+<images/energyjunction.png, id=94, 443.7378pt x 327.3831pt>
+File: images/energyjunction.png Graphic file (type png)
+<use images/energyjunction.png>
+Package pdftex.def Info: images/energyjunction.png  used on input line 130.
+(pdftex.def)             Requested size: 215.10196pt x 158.69568pt.
  [10
 
- <./images/thumbnail.png>]
-<images/temp5.png, id=101, 406.8801pt x 327.3831pt>
-File: images/temp5.png Graphic file (type png)
-<use images/temp5.png>
-Package pdftex.def Info: images/temp5.png  used on input line 140.
-(pdftex.def)             Requested size: 215.10196pt x 173.0726pt.
+ <./images/energyjunction.png>]
+<images/thumbnail.png, id=101, 1439.3775pt x 1083.04625pt>
+File: images/thumbnail.png Graphic file (type png)
+<use images/thumbnail.png>
+Package pdftex.def Info: images/thumbnail.png  used on input line 139.
+(pdftex.def)             Requested size: 215.10196pt x 161.83847pt.
  [11
 
- <./images/temp5.png>]
-<images/temp5800k.png, id=108, 412.6617pt x 327.3831pt>
-File: images/temp5800k.png Graphic file (type png)
-<use images/temp5800k.png>
-Package pdftex.def Info: images/temp5800k.png  used on input line 152.
-(pdftex.def)             Requested size: 215.10196pt x 170.64981pt.
+ <./images/thumbnail.png>]
+<images/temp5.png, id=108, 406.8801pt x 327.3831pt>
+File: images/temp5.png Graphic file (type png)
+<use images/temp5.png>
+Package pdftex.def Info: images/temp5.png  used on input line 150.
+(pdftex.def)             Requested size: 215.10196pt x 173.0726pt.
  [12
 
- <./images/temp5800k.png>]
+ <./images/temp5.png>]
+<images/temp5800k.png, id=115, 419.166pt x 327.3831pt>
 File: images/temp5800k.png Graphic file (type png)
 <use images/temp5800k.png>
-Package pdftex.def Info: images/temp5800k.png  used on input line 163.
-(pdftex.def)             Requested size: 215.10196pt x 170.64981pt.
+Package pdftex.def Info: images/temp5800k.png  used on input line 162.
+(pdftex.def)             Requested size: 215.10196pt x 168.00221pt.
  [13
 
-]
+ <./images/temp5800k.png>]
+<images/extra1000k3d.png, id=123, 299.1978pt x 289.08pt>
+File: images/extra1000k3d.png Graphic file (type png)
+<use images/extra1000k3d.png>
+Package pdftex.def Info: images/extra1000k3d.png  used on input line 171.
+(pdftex.def)             Requested size: 215.10196pt x 207.83307pt.
+ [14
+
+ <./images/extra1000k3d.png>]
+<images/extra1000klateral.png, id=131, 416.2752pt x 312.2064pt>
+File: images/extra1000klateral.png Graphic file (type png)
+<use images/extra1000klateral.png>
+Package pdftex.def Info: images/extra1000klateral.png  used on input line 181.
+(pdftex.def)             Requested size: 215.10196pt x 161.3288pt.
+ [15
+
+ <./images/extra1000klateral.png>]
+<images/extra1000kabove.png, id=138, 406.8801pt x 312.2064pt>
+File: images/extra1000kabove.png Graphic file (type png)
+<use images/extra1000kabove.png>
+Package pdftex.def Info: images/extra1000kabove.png  used on input line 191.
+(pdftex.def)             Requested size: 215.10196pt x 165.04938pt.
+ [16
+
+ <./images/extra1000kabove.png>]
+<images/extra600k3d.png, id=145, 299.1978pt x 289.08pt>
+File: images/extra600k3d.png Graphic file (type png)
+<use images/extra600k3d.png>
+Package pdftex.def Info: images/extra600k3d.png  used on input line 200.
+(pdftex.def)             Requested size: 215.10196pt x 207.83307pt.
+ [17
+
+ <./images/extra600k3d.png>]
+<images/extra600klateral.png, id=152, 416.2752pt x 312.2064pt>
+File: images/extra600klateral.png Graphic file (type png)
+<use images/extra600klateral.png>
+Package pdftex.def Info: images/extra600klateral.png  used on input line 210.
+(pdftex.def)             Requested size: 215.10196pt x 161.3288pt.
+ [18
+
+ <./images/extra600klateral.png>]
+<images/extra600kabove.png, id=159, 406.8801pt x 312.2064pt>
+File: images/extra600kabove.png Graphic file (type png)
+<use images/extra600kabove.png>
+Package pdftex.def Info: images/extra600kabove.png  used on input line 220.
+(pdftex.def)             Requested size: 215.10196pt x 165.04938pt.
+ [19
+
+ <./images/extra600kabove.png>]
 \tf@nav=\write6
 \openout6 = `presentazione_MD.nav'.
 
@@ -826,18 +875,18 @@ Package rerunfilecheck Info: File `presentazione_MD.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 21671 strings out of 475735
- 417400 string characters out of 5784786
+ 21761 strings out of 475735
+ 419440 string characters out of 5784786
  1858759 words of memory out of 5000000
- 41939 multiletter control sequences out of 15000+600000
- 520137 words of font info for 58 fonts, out of 8000000 for 9000
+ 42015 multiletter control sequences out of 15000+600000
+ 524241 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,123p,494b,507s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on .latex_trash/presentazione_MD.pdf (13 pages, 1047500 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on .latex_trash/presentazione_MD.pdf (19 pages, 1184878 bytes).
 PDF statistics:
- 172 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 500000)
- 120 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 226 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
+ 39 named destinations out of 1000 (max. 500000)
+ 155 words of extra memory for PDF output out of 10000 (max. 10000000)
 

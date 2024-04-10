@@ -26,7 +26,8 @@ int main(int argc, char *argv[])
     sprintf(file_name, "../data/input_files/fcc100a%d.dat", N);
     load_data(file_name);
 
-    thermalization();
+    sprintf(file_name, "../data/ex1_part3/5a/therm_energy_temperatureT%d.dat", T_INIT);
+    thermalization(file_name);
 
     sprintf(file_name, "../data/ex1_part3/5a/energy_temperatureT%d.dat", T_INIT);
     fd = fopen(file_name, "w");

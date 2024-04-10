@@ -349,16 +349,38 @@ void euler_evolution()
     eval_forces();
 }
 
-void thermalization()
+void thermalization(char file_name[])
 {
     int i;
 
-    eval_nbrs();
-    eval_forces();
-    generate_inital_v();
+    if (file_name[0] == '\0')
+    {
+        eval_nbrs();
+        eval_forces();
+        generate_inital_v();
 
-    for (i = 0; i * DT < TERM_TIME; i++)
-        verlet_evolution();
+        for (i = 0; i * DT < TERM_TIME; i++)
+            verlet_evolution();
+    }
+
+    else
+    {
+        FILE *fd;
+
+        eval_nbrs();
+        eval_forces();
+        generate_inital_v();
+
+        fd = fopen(file_name, "w");
+
+        for (i = 0; i * DT < TERM_TIME; i++)
+        {
+            verlet_evolution();
+            fprintf(fd, "%.15e %.15e %.15e\n", i * DT, eval_K() + eval_U(), eval_temperature());
+        }
+
+        fclose(fd);
+    }
 }
 
 void eval_coefficients()

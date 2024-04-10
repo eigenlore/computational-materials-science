@@ -13,7 +13,7 @@ double eval_temperature();
 void eval_forces();
 void verlet_evolution();
 void euler_evolution();
-void thermalization();
+void thermalization(char file_name[]);
 void eval_coefficients();
 void print_potential();
 double *eval_L();

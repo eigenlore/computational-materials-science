@@ -32,7 +32,8 @@ int main(int argc, char *argv[])
     sprintf(file_name, "../data/ex1_part1/1d/energy_temperature.dat");
     fd = fopen(file_name, "w");
 
-    thermalization();
+    sprintf(file_name, "../data/ex1_part1/1d/therm_energy_temperature.dat");
+    thermalization(file_name);
 
     for (i = 0; i * DT < TOT_TIME; i++)
     {
