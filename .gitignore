@@ -1,4 +1,4 @@
 *.d
 *.o
-*_codes/data/*
+*.dat
  
