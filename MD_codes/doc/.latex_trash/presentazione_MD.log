@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.3.18)  10 APR 2024 14:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.3.18)  15 APR 2024 11:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -694,167 +694,206 @@ Dictionary: translator-theorem-dictionary, Language: English
 ) (.latex_trash/presentazione_MD.nav) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 42.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 38.
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 42.
  (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
 )
-<images/temp1.png, id=29, 406.8801pt x 327.3831pt>
+
+LaTeX Warning: Command \r invalid in math mode on input line 42.
+
+[2
+
+]
+<images/temp1.png, id=39, 406.8801pt x 327.3831pt>
 File: images/temp1.png Graphic file (type png)
 <use images/temp1.png>
-Package pdftex.def Info: images/temp1.png  used on input line 38.
+Package pdftex.def Info: images/temp1.png  used on input line 53.
 (pdftex.def)             Requested size: 215.10196pt x 173.0726pt.
- [2
-
- <./images/temp1.png>]
-<images/energy1.png, id=41, 456.7464pt x 327.3831pt>
-File: images/energy1.png Graphic file (type png)
-<use images/energy1.png>
-Package pdftex.def Info: images/energy1.png  used on input line 50.
-(pdftex.def)             Requested size: 215.10196pt x 154.1798pt.
  [3
 
+ <./images/temp1.png>]
+<images/tempafter.png, id=47, 406.8801pt x 327.3831pt>
+File: images/tempafter.png Graphic file (type png)
+<use images/tempafter.png>
+Package pdftex.def Info: images/tempafter.png  used on input line 64.
+(pdftex.def)             Requested size: 215.10196pt x 173.0726pt.
+ [4
+
+ <./images/tempafter.png>]
+<images/energy1.png, id=54, 456.7464pt x 327.3831pt>
+File: images/energy1.png Graphic file (type png)
+<use images/energy1.png>
+Package pdftex.def Info: images/energy1.png  used on input line 76.
+(pdftex.def)             Requested size: 215.10196pt x 154.1798pt.
+ [5
+
  <./images/energy1.png>]
-<images/distvelocity1.png, id=49, 395.3169pt x 327.3831pt>
+<images/distvelocity1.png, id=61, 395.3169pt x 327.3831pt>
 File: images/distvelocity1.png Graphic file (type png)
 <use images/distvelocity1.png>
-Package pdftex.def Info: images/distvelocity1.png  used on input line 61.
+Package pdftex.def Info: images/distvelocity1.png  used on input line 87.
 (pdftex.def)             Requested size: 215.10196pt x 178.138pt.
 
-Overfull \vbox (5.25317pt too high) detected at line 61
+Overfull \vbox (5.25317pt too high) detected at line 87
  []
 
-[4
+[6
 
  <./images/distvelocity1.png>]
 
-LaTeX Warning: Command \r invalid in math mode on input line 73.
+LaTeX Warning: Command \r invalid in math mode on input line 99.
 
-<images/force.png, id=57, 423.5022pt x 327.3831pt>
+<images/force.png, id=69, 423.5022pt x 327.3831pt>
 File: images/force.png Graphic file (type png)
 <use images/force.png>
-Package pdftex.def Info: images/force.png  used on input line 73.
+Package pdftex.def Info: images/force.png  used on input line 99.
 (pdftex.def)             Requested size: 215.10196pt x 166.2788pt.
-[5
+[7
 
  <./images/force.png>]
-<images/tempforce.png, id=64, 406.8801pt x 327.3831pt>
+
+LaTeX Warning: Command \r invalid in math mode on input line 110.
+
+<images/Usteepest.png, id=77, 608.2725pt x 454.69875pt>
+File: images/Usteepest.png Graphic file (type png)
+<use images/Usteepest.png>
+Package pdftex.def Info: images/Usteepest.png  used on input line 110.
+(pdftex.def)             Requested size: 215.10196pt x 160.79128pt.
+[8
+
+ <./images/Usteepest.png>]
+<images/tempforce.png, id=83, 406.8801pt x 327.3831pt>
 File: images/tempforce.png Graphic file (type png)
 <use images/tempforce.png>
-Package pdftex.def Info: images/tempforce.png  used on input line 84.
+Package pdftex.def Info: images/tempforce.png  used on input line 121.
 (pdftex.def)             Requested size: 215.10196pt x 173.0726pt.
- [6
-
- <./images/tempforce.png>]
-<images/awfulenergy.png, id=71, 437.2335pt x 327.3831pt>
-File: images/awfulenergy.png Graphic file (type png)
-<use images/awfulenergy.png>
-Package pdftex.def Info: images/awfulenergy.png  used on input line 97.
-(pdftex.def)             Requested size: 215.10196pt x 161.06352pt.
- [7
-
- <./images/awfulenergy.png>]
-<images/lowertimestepawful.png, id=79, 435.7881pt x 327.3831pt>
-File: images/lowertimestepawful.png Graphic file (type png)
-<use images/lowertimestepawful.png>
-Package pdftex.def Info: images/lowertimestepawful.png  used on input line 110.
-(pdftex.def)             Requested size: 215.10196pt x 161.59305pt.
- [8
-
- <./images/lowertimestepawful.png>]
-<images/lowertimestepamazing.png, id=86, 410.4936pt x 327.3831pt>
-File: images/lowertimestepamazing.png Graphic file (type png)
-<use images/lowertimestepamazing.png>
-Package pdftex.def Info: images/lowertimestepamazing.png  used on input line 120.
-(pdftex.def)             Requested size: 215.10196pt x 171.55399pt.
  [9
 
- <./images/lowertimestepamazing.png>]
-<images/energyjunction.png, id=94, 443.7378pt x 327.3831pt>
-File: images/energyjunction.png Graphic file (type png)
-<use images/energyjunction.png>
-Package pdftex.def Info: images/energyjunction.png  used on input line 130.
-(pdftex.def)             Requested size: 215.10196pt x 158.69568pt.
+ <./images/tempforce.png>]
+<images/awfulenergy.png, id=90, 437.2335pt x 327.3831pt>
+File: images/awfulenergy.png Graphic file (type png)
+<use images/awfulenergy.png>
+Package pdftex.def Info: images/awfulenergy.png  used on input line 134.
+(pdftex.def)             Requested size: 215.10196pt x 161.06352pt.
  [10
 
- <./images/energyjunction.png>]
-<images/thumbnail.png, id=101, 1439.3775pt x 1083.04625pt>
-File: images/thumbnail.png Graphic file (type png)
-<use images/thumbnail.png>
-Package pdftex.def Info: images/thumbnail.png  used on input line 139.
-(pdftex.def)             Requested size: 215.10196pt x 161.83847pt.
+ <./images/awfulenergy.png>]
+<images/lowertimestepawful.png, id=97, 435.7881pt x 327.3831pt>
+File: images/lowertimestepawful.png Graphic file (type png)
+<use images/lowertimestepawful.png>
+Package pdftex.def Info: images/lowertimestepawful.png  used on input line 147.
+(pdftex.def)             Requested size: 215.10196pt x 161.59305pt.
  [11
 
- <./images/thumbnail.png>]
-<images/temp5.png, id=108, 406.8801pt x 327.3831pt>
-File: images/temp5.png Graphic file (type png)
-<use images/temp5.png>
-Package pdftex.def Info: images/temp5.png  used on input line 150.
-(pdftex.def)             Requested size: 215.10196pt x 173.0726pt.
- [12
+ <./images/lowertimestepawful.png>]
 
- <./images/temp5.png>]
-<images/temp5800k.png, id=115, 419.166pt x 327.3831pt>
-File: images/temp5800k.png Graphic file (type png)
-<use images/temp5800k.png>
-Package pdftex.def Info: images/temp5800k.png  used on input line 162.
-(pdftex.def)             Requested size: 215.10196pt x 168.00221pt.
+LaTeX Warning: Command \r invalid in math mode on input line 157.
+
+
+LaTeX Warning: Command \r invalid in math mode on input line 157.
+
+<images/LJ.png, id=104, 581.17125pt x 454.69875pt>
+File: images/LJ.png Graphic file (type png)
+<use images/LJ.png>
+Package pdftex.def Info: images/LJ.png  used on input line 157.
+(pdftex.def)             Requested size: 215.10196pt x 168.2914pt.
+[12
+
+ <./images/LJ.png>]
+<images/lowertimestepamazing.png, id=110, 410.4936pt x 327.3831pt>
+File: images/lowertimestepamazing.png Graphic file (type png)
+<use images/lowertimestepamazing.png>
+Package pdftex.def Info: images/lowertimestepamazing.png  used on input line 167.
+(pdftex.def)             Requested size: 215.10196pt x 171.55399pt.
  [13
 
- <./images/temp5800k.png>]
-<images/extra1000k3d.png, id=123, 299.1978pt x 289.08pt>
-File: images/extra1000k3d.png Graphic file (type png)
-<use images/extra1000k3d.png>
-Package pdftex.def Info: images/extra1000k3d.png  used on input line 171.
-(pdftex.def)             Requested size: 215.10196pt x 207.83307pt.
+ <./images/lowertimestepamazing.png>]
+<images/energyjunction.png, id=119, 443.7378pt x 327.3831pt>
+File: images/energyjunction.png Graphic file (type png)
+<use images/energyjunction.png>
+Package pdftex.def Info: images/energyjunction.png  used on input line 177.
+(pdftex.def)             Requested size: 215.10196pt x 158.69568pt.
  [14
 
- <./images/extra1000k3d.png>]
-<images/extra1000klateral.png, id=131, 416.2752pt x 312.2064pt>
-File: images/extra1000klateral.png Graphic file (type png)
-<use images/extra1000klateral.png>
-Package pdftex.def Info: images/extra1000klateral.png  used on input line 181.
-(pdftex.def)             Requested size: 215.10196pt x 161.3288pt.
+ <./images/energyjunction.png>]
+<images/thumbnail.png, id=126, 1439.3775pt x 1083.04625pt>
+File: images/thumbnail.png Graphic file (type png)
+<use images/thumbnail.png>
+Package pdftex.def Info: images/thumbnail.png  used on input line 186.
+(pdftex.def)             Requested size: 215.10196pt x 161.83847pt.
  [15
 
- <./images/extra1000klateral.png>]
-<images/extra1000kabove.png, id=138, 406.8801pt x 312.2064pt>
-File: images/extra1000kabove.png Graphic file (type png)
-<use images/extra1000kabove.png>
-Package pdftex.def Info: images/extra1000kabove.png  used on input line 191.
-(pdftex.def)             Requested size: 215.10196pt x 165.04938pt.
+ <./images/thumbnail.png>]
+<images/temp5.png, id=133, 406.8801pt x 327.3831pt>
+File: images/temp5.png Graphic file (type png)
+<use images/temp5.png>
+Package pdftex.def Info: images/temp5.png  used on input line 197.
+(pdftex.def)             Requested size: 215.10196pt x 173.0726pt.
  [16
 
- <./images/extra1000kabove.png>]
-<images/extra600k3d.png, id=145, 299.1978pt x 289.08pt>
-File: images/extra600k3d.png Graphic file (type png)
-<use images/extra600k3d.png>
-Package pdftex.def Info: images/extra600k3d.png  used on input line 200.
-(pdftex.def)             Requested size: 215.10196pt x 207.83307pt.
+ <./images/temp5.png>]
+<images/temp5800k.png, id=140, 419.166pt x 327.3831pt>
+File: images/temp5800k.png Graphic file (type png)
+<use images/temp5800k.png>
+Package pdftex.def Info: images/temp5800k.png  used on input line 209.
+(pdftex.def)             Requested size: 215.10196pt x 168.00221pt.
  [17
 
- <./images/extra600k3d.png>]
-<images/extra600klateral.png, id=152, 416.2752pt x 312.2064pt>
-File: images/extra600klateral.png Graphic file (type png)
-<use images/extra600klateral.png>
-Package pdftex.def Info: images/extra600klateral.png  used on input line 210.
-(pdftex.def)             Requested size: 215.10196pt x 161.3288pt.
+ <./images/temp5800k.png>]
+<images/extra1000k3d.png, id=147, 299.1978pt x 289.08pt>
+File: images/extra1000k3d.png Graphic file (type png)
+<use images/extra1000k3d.png>
+Package pdftex.def Info: images/extra1000k3d.png  used on input line 218.
+(pdftex.def)             Requested size: 215.10196pt x 207.83307pt.
  [18
 
+ <./images/extra1000k3d.png>]
+<images/extra1000klateral.png, id=155, 416.2752pt x 312.2064pt>
+File: images/extra1000klateral.png Graphic file (type png)
+<use images/extra1000klateral.png>
+Package pdftex.def Info: images/extra1000klateral.png  used on input line 228.
+(pdftex.def)             Requested size: 215.10196pt x 161.3288pt.
+ [19
+
+ <./images/extra1000klateral.png>]
+<images/extra1000kabove.png, id=163, 406.8801pt x 312.2064pt>
+File: images/extra1000kabove.png Graphic file (type png)
+<use images/extra1000kabove.png>
+Package pdftex.def Info: images/extra1000kabove.png  used on input line 238.
+(pdftex.def)             Requested size: 215.10196pt x 165.04938pt.
+ [20
+
+ <./images/extra1000kabove.png>]
+<images/extra600k3d.png, id=170, 299.1978pt x 289.08pt>
+File: images/extra600k3d.png Graphic file (type png)
+<use images/extra600k3d.png>
+Package pdftex.def Info: images/extra600k3d.png  used on input line 247.
+(pdftex.def)             Requested size: 215.10196pt x 207.83307pt.
+ [21
+
+ <./images/extra600k3d.png>]
+<images/extra600klateral.png, id=177, 416.2752pt x 312.2064pt>
+File: images/extra600klateral.png Graphic file (type png)
+<use images/extra600klateral.png>
+Package pdftex.def Info: images/extra600klateral.png  used on input line 257.
+(pdftex.def)             Requested size: 215.10196pt x 161.3288pt.
+ [22
+
  <./images/extra600klateral.png>]
-<images/extra600kabove.png, id=159, 406.8801pt x 312.2064pt>
+<images/extra600kabove.png, id=184, 406.8801pt x 312.2064pt>
 File: images/extra600kabove.png Graphic file (type png)
 <use images/extra600kabove.png>
-Package pdftex.def Info: images/extra600kabove.png  used on input line 220.
+Package pdftex.def Info: images/extra600kabove.png  used on input line 267.
 (pdftex.def)             Requested size: 215.10196pt x 165.04938pt.
- [19
+ [23
 
  <./images/extra600kabove.png>]
 \tf@nav=\write6
@@ -875,18 +914,18 @@ Package rerunfilecheck Info: File `presentazione_MD.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 21761 strings out of 475735
- 419440 string characters out of 5784786
- 1858759 words of memory out of 5000000
- 42015 multiletter control sequences out of 15000+600000
+ 21831 strings out of 475735
+ 421039 string characters out of 5784786
+ 1859759 words of memory out of 5000000
+ 42077 multiletter control sequences out of 15000+600000
  524241 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,123p,494b,507s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on .latex_trash/presentazione_MD.pdf (19 pages, 1184878 bytes).
+Output written on .latex_trash/presentazione_MD.pdf (23 pages, 1289910 bytes).
 PDF statistics:
- 226 PDF objects out of 1000 (max. 8388607)
- 135 compressed objects within 2 object streams
- 39 named destinations out of 1000 (max. 500000)
- 155 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 251 PDF objects out of 1000 (max. 8388607)
+ 152 compressed objects within 2 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 170 words of extra memory for PDF output out of 10000 (max. 10000000)
 

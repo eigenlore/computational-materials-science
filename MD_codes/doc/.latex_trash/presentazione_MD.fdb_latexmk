@@ -1,10 +1,10 @@
 # Fdb version 4
-["pdflatex"] 1712750530 "/home/lore/Desktop/Università/computational-materials-science/MD_codes/doc/presentazione_MD.tex" ".latex_trash/presentazione_MD.pdf" "presentazione_MD" 1712750533 0
-  ".latex_trash/presentazione_MD.aux" 1712750533 3275 d6b1cfa25e0ae072b4e0c5cd49f3fe36 "pdflatex"
-  ".latex_trash/presentazione_MD.nav" 1712750533 1946 cc1d57bc897673374b837eab8153475a "pdflatex"
-  ".latex_trash/presentazione_MD.out" 1712750531 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["pdflatex"] 1713171751 "/home/lore/Desktop/Università/computational-materials-science/MD_codes/doc/presentazione_MD.tex" ".latex_trash/presentazione_MD.pdf" "presentazione_MD" 1713171756 0
+  ".latex_trash/presentazione_MD.aux" 1713171756 3791 c7efaa7cc35b2ac6beee520784ff17a7 "pdflatex"
+  ".latex_trash/presentazione_MD.nav" 1713171756 2318 6bf076db6e1a8e33e3ccecc7cb97fcb8 "pdflatex"
+  ".latex_trash/presentazione_MD.out" 1713171753 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "/etc/texmf/web2c/texmf.cnf" 1690461169 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/lore/Desktop/Università/computational-materials-science/MD_codes/doc/presentazione_MD.tex" 1712750527 4785 f8d97f7f8a2d61fccb60786a39c7ff32 ""
+  "/home/lore/Desktop/Università/computational-materials-science/MD_codes/doc/presentazione_MD.tex" 1713171748 5974 f4bb3dc3cbc3f62c0fb4d6ae4c9623ce ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -205,6 +205,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1693172360 40357 c95f5d5e031b5c7040b426833c11f2e0 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1706191714 4643645 d2d1d8b8ba87ed005f4aaf1ce646a79e ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1710758028 7907798 c72303c2ecfc37b00a75b58b0f3dcd67 ""
+  "images/LJ.png" 1713171366 23346 b1099c10e5ecd04ffdb0bcfc3b95642f ""
+  "images/Usteepest.png" 1713170467 27266 2395a701f2c07d1ad0259d386bb859b5 ""
   "images/awfulenergy.png" 1712678025 44721 211a55b4acc8214a08a573809c1b7c8b ""
   "images/distvelocity1.png" 1712675661 27140 62fa1d728ccb827f0eda07fc1b267bee ""
   "images/energy1.png" 1712674169 54338 048868f4cfa8203b894e4319326f4d72 ""
@@ -221,9 +223,10 @@
   "images/temp1.png" 1712747445 38320 03627049a8854d4f500bec1dd0e1b225 ""
   "images/temp5.png" 1712748674 37963 89a986907403378afda50da887811975 ""
   "images/temp5800k.png" 1712748700 34078 96882d3bd0117bfea701b6ee29de548f ""
+  "images/tempafter.png" 1713169788 46929 22a12794facdadc256680b314de46ca3 ""
   "images/tempforce.png" 1712747675 29830 5bef80e4c02b177e445770817772e27c ""
   "images/thumbnail.png" 1712684378 433527 77b6f60fa1777e189d0ae5e687556e30 ""
-  "presentazione_MD.tex" 1712750527 4785 f8d97f7f8a2d61fccb60786a39c7ff32 ""
+  "presentazione_MD.tex" 1713171748 5974 f4bb3dc3cbc3f62c0fb4d6ae4c9623ce ""
   (generated)
   ".latex_trash/presentazione_MD.aux"
   ".latex_trash/presentazione_MD.log"

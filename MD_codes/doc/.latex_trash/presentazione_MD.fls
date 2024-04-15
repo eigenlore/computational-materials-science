@@ -370,6 +370,11 @@ INPUT ./images/temp1.png
 INPUT ./images/temp1.png
 INPUT ./images/temp1.png
 INPUT ./images/temp1.png
+INPUT ./images/tempafter.png
+INPUT ./images/tempafter.png
+INPUT ./images/tempafter.png
+INPUT ./images/tempafter.png
+INPUT ./images/tempafter.png
 INPUT ./images/energy1.png
 INPUT ./images/energy1.png
 INPUT ./images/energy1.png
@@ -385,6 +390,11 @@ INPUT ./images/force.png
 INPUT ./images/force.png
 INPUT ./images/force.png
 INPUT ./images/force.png
+INPUT ./images/Usteepest.png
+INPUT ./images/Usteepest.png
+INPUT ./images/Usteepest.png
+INPUT ./images/Usteepest.png
+INPUT ./images/Usteepest.png
 INPUT ./images/tempforce.png
 INPUT ./images/tempforce.png
 INPUT ./images/tempforce.png
@@ -400,6 +410,11 @@ INPUT ./images/lowertimestepawful.png
 INPUT ./images/lowertimestepawful.png
 INPUT ./images/lowertimestepawful.png
 INPUT ./images/lowertimestepawful.png
+INPUT ./images/LJ.png
+INPUT ./images/LJ.png
+INPUT ./images/LJ.png
+INPUT ./images/LJ.png
+INPUT ./images/LJ.png
 INPUT ./images/lowertimestepamazing.png
 INPUT ./images/lowertimestepamazing.png
 INPUT ./images/lowertimestepamazing.png
