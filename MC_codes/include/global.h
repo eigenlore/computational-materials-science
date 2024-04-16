@@ -37,11 +37,11 @@
 #define LX 25
 #define LY 25
 #define LZ 10
-#define N 25
-#define J0 0.2  /*eV*/
+#define N 27
+#define J0 -0.35  /*eV*/
 #define J1 -0.2 /*eV*/
 #define N_SWEEP 1000000
-#define T 4 /*K*/
+#define T 0 /*K*/
 #define N_TERM 200000
 #define DIM3
 

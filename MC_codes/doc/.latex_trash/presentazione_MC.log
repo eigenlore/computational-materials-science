@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.3.18)  11 APR 2024 17:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.3.18)  16 APR 2024 18:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -929,68 +929,214 @@ Package pdftex.def Info: images/cenergy25.png  used on input line 241.
  [21
 
  <./images/cenergy25.png (PNG copy)>]
-<images/dconf-0.1.png, id=157, 400.49625pt x 410.53375pt>
-File: images/dconf-0.1.png Graphic file (type png)
-<use images/dconf-0.1.png>
-Package pdftex.def Info: images/dconf-0.1.png  used on input line 252.
-(pdftex.def)             Requested size: 215.10196pt x 220.49472pt.
+<images/cenergy35.png, id=157, 567.11874pt x 454.69875pt>
+File: images/cenergy35.png Graphic file (type png)
+<use images/cenergy35.png>
+Package pdftex.def Info: images/cenergy35.png  used on input line 252.
+(pdftex.def)             Requested size: 215.10196pt x 172.46123pt.
+ [22
 
-Overfull \vbox (11.95076pt too high) detected at line 252
- []
+ <./images/cenergy35.png (PNG copy)>]
+<images/nn15real.png, id=163, 409.7709pt x 327.3831pt>
+File: images/nn15real.png Graphic file (type png)
+<use images/nn15real.png>
+Package pdftex.def Info: images/nn15real.png  used on input line 263.
+(pdftex.def)             Requested size: 215.10196pt x 171.85371pt.
+ [23
 
-[22
-
- <./images/dconf-0.1.png (PNG copy)>]
-<images/dconf+0.1.png, id=163, 400.49625pt x 410.53375pt>
-File: images/dconf+0.1.png Graphic file (type png)
-<use images/dconf+0.1.png>
-Package pdftex.def Info: images/dconf+0.1.png  used on input line 263.
-(pdftex.def)             Requested size: 215.10196pt x 220.49472pt.
-
-Overfull \vbox (11.95076pt too high) detected at line 263
- []
-
-[23
-
- <./images/dconf+0.1.png (PNG copy)>]
-<images/dratio0K.png, id=169, 569.12625pt x 454.69875pt>
-File: images/dratio0K.png Graphic file (type png)
-<use images/dratio0K.png>
-Package pdftex.def Info: images/dratio0K.png  used on input line 274.
-(pdftex.def)             Requested size: 215.10196pt x 171.8576pt.
+ <./images/nn15real.png>]
+<images/nn15.png, id=171, 409.7709pt x 327.3831pt>
+File: images/nn15.png Graphic file (type png)
+<use images/nn15.png>
+Package pdftex.def Info: images/nn15.png  used on input line 274.
+(pdftex.def)             Requested size: 215.10196pt x 171.85371pt.
  [24
 
- <./images/dratio0K.png (PNG copy)>]
-<images/dratio500K.png, id=176, 569.12625pt x 454.69875pt>
-File: images/dratio500K.png Graphic file (type png)
-<use images/dratio500K.png>
-Package pdftex.def Info: images/dratio500K.png  used on input line 285.
-(pdftex.def)             Requested size: 215.10196pt x 171.8576pt.
+ <./images/nn15.png>]
+<images/nn35.png, id=179, 409.7709pt x 327.3831pt>
+File: images/nn35.png Graphic file (type png)
+<use images/nn35.png>
+Package pdftex.def Info: images/nn35.png  used on input line 285.
+(pdftex.def)             Requested size: 215.10196pt x 171.85371pt.
  [25
 
+ <./images/nn35.png>]
+<images/dconf-0.1.png, id=187, 400.49625pt x 410.53375pt>
+File: images/dconf-0.1.png Graphic file (type png)
+<use images/dconf-0.1.png>
+Package pdftex.def Info: images/dconf-0.1.png  used on input line 297.
+(pdftex.def)             Requested size: 215.10196pt x 220.49472pt.
+
+Overfull \vbox (11.95076pt too high) detected at line 297
+ []
+
+[26
+
+ <./images/dconf-0.1.png (PNG copy)>]
+<images/dconf+0.1.png, id=193, 400.49625pt x 410.53375pt>
+File: images/dconf+0.1.png Graphic file (type png)
+<use images/dconf+0.1.png>
+Package pdftex.def Info: images/dconf+0.1.png  used on input line 308.
+(pdftex.def)             Requested size: 215.10196pt x 220.49472pt.
+
+Overfull \vbox (11.95076pt too high) detected at line 308
+ []
+
+[27
+
+ <./images/dconf+0.1.png (PNG copy)>]
+<images/dfinalconf1.png, id=199, 288.3573pt x 295.5843pt>
+File: images/dfinalconf1.png Graphic file (type png)
+<use images/dfinalconf1.png>
+Package pdftex.def Info: images/dfinalconf1.png  used on input line 319.
+(pdftex.def)             Requested size: 215.10196pt x 220.50148pt.
+
+Overfull \vbox (11.95752pt too high) detected at line 319
+ []
+
+[28
+
+ <./images/dfinalconf1.png>]
+<images/dfinalconf2.png, id=206, 287.6346pt x 295.5843pt>
+File: images/dfinalconf2.png Graphic file (type png)
+<use images/dfinalconf2.png>
+Package pdftex.def Info: images/dfinalconf2.png  used on input line 330.
+(pdftex.def)             Requested size: 215.10196pt x 221.05173pt.
+
+Overfull \vbox (12.50777pt too high) detected at line 330
+ []
+
+[29
+
+ <./images/dfinalconf2.png>]
+<images/denergy0k.png, id=213, 414.8298pt x 327.3831pt>
+File: images/denergy0k.png Graphic file (type png)
+<use images/denergy0k.png>
+Package pdftex.def Info: images/denergy0k.png  used on input line 341.
+(pdftex.def)             Requested size: 215.10196pt x 169.75563pt.
+ [30
+
+ <./images/denergy0k.png>]
+<images/denergy500K.png, id=220, 414.8298pt x 327.3831pt>
+File: images/denergy500K.png Graphic file (type png)
+<use images/denergy500K.png>
+Package pdftex.def Info: images/denergy500K.png  used on input line 352.
+(pdftex.def)             Requested size: 215.10196pt x 169.75563pt.
+ [31
+
+ <./images/denergy500k.png>]
+<images/denergy1000K.png, id=228, 414.8298pt x 327.3831pt>
+File: images/denergy1000K.png Graphic file (type png)
+<use images/denergy1000K.png>
+Package pdftex.def Info: images/denergy1000K.png  used on input line 363.
+(pdftex.def)             Requested size: 215.10196pt x 169.75563pt.
+ [32
+
+ <./images/denergy1000k.png>]
+<images/dratio0K.png, id=235, 569.12625pt x 454.69875pt>
+File: images/dratio0K.png Graphic file (type png)
+<use images/dratio0K.png>
+Package pdftex.def Info: images/dratio0K.png  used on input line 374.
+(pdftex.def)             Requested size: 215.10196pt x 171.8576pt.
+ [33
+
+ <./images/dratio0K.png (PNG copy)>]
+<images/dratio500K.png, id=241, 569.12625pt x 454.69875pt>
+File: images/dratio500K.png Graphic file (type png)
+<use images/dratio500K.png>
+Package pdftex.def Info: images/dratio500K.png  used on input line 385.
+(pdftex.def)             Requested size: 215.10196pt x 171.8576pt.
+ [34
+
  <./images/dratio500K.png (PNG copy)>]
-<images/dratio1000K.png, id=183, 569.12625pt x 454.69875pt>
+<images/dratio1000K.png, id=247, 569.12625pt x 454.69875pt>
 File: images/dratio1000K.png Graphic file (type png)
 <use images/dratio1000K.png>
-Package pdftex.def Info: images/dratio1000K.png  used on input line 296.
+Package pdftex.def Info: images/dratio1000K.png  used on input line 396.
 (pdftex.def)             Requested size: 215.10196pt x 171.8576pt.
- [26
+ [35
 
  <./images/dratio1000K.png (PNG copy)>]
-File: images/dratio1000K.png Graphic file (type png)
-<use images/dratio1000K.png>
-Package pdftex.def Info: images/dratio1000K.png  used on input line 307.
-(pdftex.def)             Requested size: 215.10196pt x 171.8576pt.
- [27
+<images/erocco1.png, id=253, 598.235pt x 454.69875pt>
+File: images/erocco1.png Graphic file (type png)
+<use images/erocco1.png>
+Package pdftex.def Info: images/erocco1.png  used on input line 407.
+(pdftex.def)             Requested size: 215.10196pt x 163.4902pt.
+ [36
 
-]
-File: images/dratio1000K.png Graphic file (type png)
-<use images/dratio1000K.png>
-Package pdftex.def Info: images/dratio1000K.png  used on input line 318.
-(pdftex.def)             Requested size: 215.10196pt x 171.8576pt.
- [28
+ <./images/erocco1.png (PNG copy)>]
+<images/erocco2.png, id=259, 400.49625pt x 410.53375pt>
+File: images/erocco2.png Graphic file (type png)
+<use images/erocco2.png>
+Package pdftex.def Info: images/erocco2.png  used on input line 418.
+(pdftex.def)             Requested size: 215.10196pt x 220.49472pt.
 
-]
+Overfull \vbox (11.95076pt too high) detected at line 418
+ []
+
+[37
+
+ <./images/erocco2.png (PNG copy)>]
+<images/erocco3.png, id=266, 589.20125pt x 454.69875pt>
+File: images/erocco3.png Graphic file (type png)
+<use images/erocco3.png>
+Package pdftex.def Info: images/erocco3.png  used on input line 428.
+(pdftex.def)             Requested size: 215.10196pt x 166.00182pt.
+ [38
+
+ <./images/erocco3.png (PNG copy)>]
+<images/erocco4.png, id=272, 400.49625pt x 410.53375pt>
+File: images/erocco4.png Graphic file (type png)
+<use images/erocco4.png>
+Package pdftex.def Info: images/erocco4.png  used on input line 438.
+(pdftex.def)             Requested size: 215.10196pt x 220.49472pt.
+
+Overfull \vbox (11.95076pt too high) detected at line 438
+ []
+
+[39
+
+ <./images/erocco4.png (PNG copy)>]
+<images/erocco5.png, id=278, 576.1525pt x 454.69875pt>
+File: images/erocco5.png Graphic file (type png)
+<use images/erocco5.png>
+Package pdftex.def Info: images/erocco5.png  used on input line 448.
+(pdftex.def)             Requested size: 215.10196pt x 169.75534pt.
+ [40
+
+ <./images/erocco5.png (PNG copy)>]
+<images/erocco6.png, id=284, 399.4925pt x 410.53375pt>
+File: images/erocco6.png Graphic file (type png)
+<use images/erocco6.png>
+Package pdftex.def Info: images/erocco6.png  used on input line 458.
+(pdftex.def)             Requested size: 215.10196pt x 221.04596pt.
+
+Overfull \vbox (12.502pt too high) detected at line 458
+ []
+
+[41
+
+ <./images/erocco6.png (PNG copy)>]
+<images/erocco7.png, id=290, 581.17125pt x 454.69875pt>
+File: images/erocco7.png Graphic file (type png)
+<use images/erocco7.png>
+Package pdftex.def Info: images/erocco7.png  used on input line 468.
+(pdftex.def)             Requested size: 215.10196pt x 168.2914pt.
+ [42
+
+ <./images/erocco7.png (PNG copy)>]
+<images/erocco8.png, id=296, 399.4925pt x 410.53375pt>
+File: images/erocco8.png Graphic file (type png)
+<use images/erocco8.png>
+Package pdftex.def Info: images/erocco8.png  used on input line 478.
+(pdftex.def)             Requested size: 215.10196pt x 221.04596pt.
+
+Overfull \vbox (12.502pt too high) detected at line 478
+ []
+
+[43
+
+ <./images/erocco8.png (PNG copy)>]
 \tf@nav=\write6
 \openout6 = `presentazione_MC.nav'.
 
@@ -1009,18 +1155,18 @@ Package rerunfilecheck Info: File `presentazione_MC.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 21853 strings out of 475735
- 420365 string characters out of 5784786
+ 22036 strings out of 475735
+ 424115 string characters out of 5784786
  1858759 words of memory out of 5000000
- 42091 multiletter control sequences out of 15000+600000
+ 42244 multiletter control sequences out of 15000+600000
  524241 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,123p,494b,507s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on .latex_trash/presentazione_MC.pdf (28 pages, 713689 bytes).
+Output written on .latex_trash/presentazione_MC.pdf (43 pages, 1395965 bytes).
 PDF statistics:
- 252 PDF objects out of 1000 (max. 8388607)
- 168 compressed objects within 2 object streams
- 57 named destinations out of 1000 (max. 500000)
- 186 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 365 PDF objects out of 1000 (max. 8388607)
+ 240 compressed objects within 3 object streams
+ 87 named destinations out of 1000 (max. 500000)
+ 271 words of extra memory for PDF output out of 10000 (max. 10000000)
 
