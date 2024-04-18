@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.3.18)  15 APR 2024 11:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.3.18)  18 APR 2024 12:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -794,106 +794,114 @@ Package pdftex.def Info: images/lowertimestepawful.png  used on input line 147.
  [11
 
  <./images/lowertimestepawful.png>]
+<images/energyDT-17.png, id=104, 607.26875pt x 454.69875pt>
+File: images/energyDT-17.png Graphic file (type png)
+<use images/energyDT-17.png>
+Package pdftex.def Info: images/energyDT-17.png  used on input line 158.
+(pdftex.def)             Requested size: 215.10196pt x 161.05493pt.
+ [12
 
-LaTeX Warning: Command \r invalid in math mode on input line 157.
+ <./images/energyDT-17.png>]
+
+LaTeX Warning: Command \r invalid in math mode on input line 168.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 157.
+LaTeX Warning: Command \r invalid in math mode on input line 168.
 
-<images/LJ.png, id=104, 581.17125pt x 454.69875pt>
+<images/LJ.png, id=110, 581.17125pt x 454.69875pt>
 File: images/LJ.png Graphic file (type png)
 <use images/LJ.png>
-Package pdftex.def Info: images/LJ.png  used on input line 157.
+Package pdftex.def Info: images/LJ.png  used on input line 168.
 (pdftex.def)             Requested size: 215.10196pt x 168.2914pt.
-[12
+[13
 
  <./images/LJ.png>]
-<images/lowertimestepamazing.png, id=110, 410.4936pt x 327.3831pt>
+<images/lowertimestepamazing.png, id=117, 410.4936pt x 327.3831pt>
 File: images/lowertimestepamazing.png Graphic file (type png)
 <use images/lowertimestepamazing.png>
-Package pdftex.def Info: images/lowertimestepamazing.png  used on input line 167.
+Package pdftex.def Info: images/lowertimestepamazing.png  used on input line 178.
 (pdftex.def)             Requested size: 215.10196pt x 171.55399pt.
- [13
-
- <./images/lowertimestepamazing.png>]
-<images/energyjunction.png, id=119, 443.7378pt x 327.3831pt>
-File: images/energyjunction.png Graphic file (type png)
-<use images/energyjunction.png>
-Package pdftex.def Info: images/energyjunction.png  used on input line 177.
-(pdftex.def)             Requested size: 215.10196pt x 158.69568pt.
  [14
 
- <./images/energyjunction.png>]
-<images/thumbnail.png, id=126, 1439.3775pt x 1083.04625pt>
-File: images/thumbnail.png Graphic file (type png)
-<use images/thumbnail.png>
-Package pdftex.def Info: images/thumbnail.png  used on input line 186.
-(pdftex.def)             Requested size: 215.10196pt x 161.83847pt.
+ <./images/lowertimestepamazing.png>]
+<images/energyjunction.png, id=125, 443.7378pt x 327.3831pt>
+File: images/energyjunction.png Graphic file (type png)
+<use images/energyjunction.png>
+Package pdftex.def Info: images/energyjunction.png  used on input line 188.
+(pdftex.def)             Requested size: 215.10196pt x 158.69568pt.
  [15
 
- <./images/thumbnail.png>]
-<images/temp5.png, id=133, 406.8801pt x 327.3831pt>
-File: images/temp5.png Graphic file (type png)
-<use images/temp5.png>
-Package pdftex.def Info: images/temp5.png  used on input line 197.
-(pdftex.def)             Requested size: 215.10196pt x 173.0726pt.
+ <./images/energyjunction.png>]
+<images/thumbnail.png, id=132, 1439.3775pt x 1083.04625pt>
+File: images/thumbnail.png Graphic file (type png)
+<use images/thumbnail.png>
+Package pdftex.def Info: images/thumbnail.png  used on input line 197.
+(pdftex.def)             Requested size: 215.10196pt x 161.83847pt.
  [16
 
- <./images/temp5.png>]
-<images/temp5800k.png, id=140, 419.166pt x 327.3831pt>
-File: images/temp5800k.png Graphic file (type png)
-<use images/temp5800k.png>
-Package pdftex.def Info: images/temp5800k.png  used on input line 209.
-(pdftex.def)             Requested size: 215.10196pt x 168.00221pt.
+ <./images/thumbnail.png>]
+<images/temp5.png, id=139, 406.8801pt x 327.3831pt>
+File: images/temp5.png Graphic file (type png)
+<use images/temp5.png>
+Package pdftex.def Info: images/temp5.png  used on input line 208.
+(pdftex.def)             Requested size: 215.10196pt x 173.0726pt.
  [17
 
- <./images/temp5800k.png>]
-<images/extra1000k3d.png, id=147, 299.1978pt x 289.08pt>
-File: images/extra1000k3d.png Graphic file (type png)
-<use images/extra1000k3d.png>
-Package pdftex.def Info: images/extra1000k3d.png  used on input line 218.
-(pdftex.def)             Requested size: 215.10196pt x 207.83307pt.
+ <./images/temp5.png>]
+<images/temp5800k.png, id=146, 419.166pt x 327.3831pt>
+File: images/temp5800k.png Graphic file (type png)
+<use images/temp5800k.png>
+Package pdftex.def Info: images/temp5800k.png  used on input line 220.
+(pdftex.def)             Requested size: 215.10196pt x 168.00221pt.
  [18
 
- <./images/extra1000k3d.png>]
-<images/extra1000klateral.png, id=155, 416.2752pt x 312.2064pt>
-File: images/extra1000klateral.png Graphic file (type png)
-<use images/extra1000klateral.png>
-Package pdftex.def Info: images/extra1000klateral.png  used on input line 228.
-(pdftex.def)             Requested size: 215.10196pt x 161.3288pt.
+ <./images/temp5800k.png>]
+<images/extra1000k3d.png, id=153, 299.1978pt x 289.08pt>
+File: images/extra1000k3d.png Graphic file (type png)
+<use images/extra1000k3d.png>
+Package pdftex.def Info: images/extra1000k3d.png  used on input line 229.
+(pdftex.def)             Requested size: 215.10196pt x 207.83307pt.
  [19
 
- <./images/extra1000klateral.png>]
-<images/extra1000kabove.png, id=163, 406.8801pt x 312.2064pt>
-File: images/extra1000kabove.png Graphic file (type png)
-<use images/extra1000kabove.png>
-Package pdftex.def Info: images/extra1000kabove.png  used on input line 238.
-(pdftex.def)             Requested size: 215.10196pt x 165.04938pt.
+ <./images/extra1000k3d.png>]
+<images/extra1000klateral.png, id=162, 416.2752pt x 312.2064pt>
+File: images/extra1000klateral.png Graphic file (type png)
+<use images/extra1000klateral.png>
+Package pdftex.def Info: images/extra1000klateral.png  used on input line 239.
+(pdftex.def)             Requested size: 215.10196pt x 161.3288pt.
  [20
 
- <./images/extra1000kabove.png>]
-<images/extra600k3d.png, id=170, 299.1978pt x 289.08pt>
-File: images/extra600k3d.png Graphic file (type png)
-<use images/extra600k3d.png>
-Package pdftex.def Info: images/extra600k3d.png  used on input line 247.
-(pdftex.def)             Requested size: 215.10196pt x 207.83307pt.
+ <./images/extra1000klateral.png>]
+<images/extra1000kabove.png, id=169, 406.8801pt x 312.2064pt>
+File: images/extra1000kabove.png Graphic file (type png)
+<use images/extra1000kabove.png>
+Package pdftex.def Info: images/extra1000kabove.png  used on input line 249.
+(pdftex.def)             Requested size: 215.10196pt x 165.04938pt.
  [21
 
- <./images/extra600k3d.png>]
-<images/extra600klateral.png, id=177, 416.2752pt x 312.2064pt>
-File: images/extra600klateral.png Graphic file (type png)
-<use images/extra600klateral.png>
-Package pdftex.def Info: images/extra600klateral.png  used on input line 257.
-(pdftex.def)             Requested size: 215.10196pt x 161.3288pt.
+ <./images/extra1000kabove.png>]
+<images/extra600k3d.png, id=176, 299.1978pt x 289.08pt>
+File: images/extra600k3d.png Graphic file (type png)
+<use images/extra600k3d.png>
+Package pdftex.def Info: images/extra600k3d.png  used on input line 258.
+(pdftex.def)             Requested size: 215.10196pt x 207.83307pt.
  [22
 
+ <./images/extra600k3d.png>]
+<images/extra600klateral.png, id=183, 416.2752pt x 312.2064pt>
+File: images/extra600klateral.png Graphic file (type png)
+<use images/extra600klateral.png>
+Package pdftex.def Info: images/extra600klateral.png  used on input line 268.
+(pdftex.def)             Requested size: 215.10196pt x 161.3288pt.
+ [23
+
  <./images/extra600klateral.png>]
-<images/extra600kabove.png, id=184, 406.8801pt x 312.2064pt>
+<images/extra600kabove.png, id=190, 406.8801pt x 312.2064pt>
 File: images/extra600kabove.png Graphic file (type png)
 <use images/extra600kabove.png>
-Package pdftex.def Info: images/extra600kabove.png  used on input line 267.
+Package pdftex.def Info: images/extra600kabove.png  used on input line 278.
 (pdftex.def)             Requested size: 215.10196pt x 165.04938pt.
- [23
+ [24
 
  <./images/extra600kabove.png>]
 \tf@nav=\write6
@@ -914,18 +922,18 @@ Package rerunfilecheck Info: File `presentazione_MD.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 21831 strings out of 475735
- 421039 string characters out of 5784786
+ 21842 strings out of 475735
+ 421276 string characters out of 5784786
  1859759 words of memory out of 5000000
- 42077 multiletter control sequences out of 15000+600000
+ 42086 multiletter control sequences out of 15000+600000
  524241 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,123p,494b,507s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on .latex_trash/presentazione_MD.pdf (23 pages, 1289910 bytes).
+Output written on .latex_trash/presentazione_MD.pdf (24 pages, 1327098 bytes).
 PDF statistics:
- 251 PDF objects out of 1000 (max. 8388607)
- 152 compressed objects within 2 object streams
- 47 named destinations out of 1000 (max. 500000)
- 170 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 258 PDF objects out of 1000 (max. 8388607)
+ 157 compressed objects within 2 object streams
+ 49 named destinations out of 1000 (max. 500000)
+ 175 words of extra memory for PDF output out of 10000 (max. 10000000)
 
