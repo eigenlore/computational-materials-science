@@ -19,7 +19,7 @@ all: rmxeq mkdep mkxeq
 
 # main programs and required modules 
 
-MAIN = test1 test2 test3 test4 test5 coeff print_potential print_all
+MAIN = print_potential
 
 RANDOM = ranlxs ranlxd gauss
 

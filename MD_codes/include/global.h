@@ -23,16 +23,16 @@
 #define EPS 0.345                 /*eV*/
 #define SIGMA 2.644               /*A*/
 #define RC 4.5                    /*A*/
-#define RP 4.2                    /*A*/
+#define RP 4.6                    /*A*/
 #define KB 0.00008618460742911316 /*eV/K*/
 #define M 11.205e-27              /*kg*/
 #define DT 8e-15                  /*seconds*/
-#define T_INIT 20                 /*Kelvin*/
+#define T_INIT 15                 /*Kelvin*/
 #define TERM_TIME 3e-12           /*seconds*/
 #define TOT_TIME 10e-12           /*seconds*/
-#define PBCX 1                    /*1 with PBC, 0 without*/
-#define PBCY 1                    /*1 with PBC, 0 without*/
-#define PBCZ 1                    /*1 with PBC, 0 without*/
+#define PBCX 0                    /*1 with PBC, 0 without*/
+#define PBCY 0                    /*1 with PBC, 0 without*/
+#define PBCZ 0                    /*1 with PBC, 0 without*/
 #define SIZE 16.641600            /*A*/
 #define MAX_FORCE 0.01            /*eV/A*/
 #define C_STEEP 0.001

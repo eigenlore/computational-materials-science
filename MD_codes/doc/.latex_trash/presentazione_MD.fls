@@ -365,6 +365,11 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssi10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssi8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssi8.tfm
+INPUT ./images/cutoff.png
+INPUT ./images/cutoff.png
+INPUT ./images/cutoff.png
+INPUT ./images/cutoff.png
+INPUT ./images/cutoff.png
 INPUT ./images/temp1.png
 INPUT ./images/temp1.png
 INPUT ./images/temp1.png
@@ -380,6 +385,11 @@ INPUT ./images/energy1.png
 INPUT ./images/energy1.png
 INPUT ./images/energy1.png
 INPUT ./images/energy1.png
+INPUT ./images/tempfluct.png
+INPUT ./images/tempfluct.png
+INPUT ./images/tempfluct.png
+INPUT ./images/tempfluct.png
+INPUT ./images/tempfluct.png
 INPUT ./images/distvelocity1.png
 INPUT ./images/distvelocity1.png
 INPUT ./images/distvelocity1.png
